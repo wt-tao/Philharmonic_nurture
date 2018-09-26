@@ -1,0 +1,35 @@
+/* pages/leave/leave.wxss */
+.kuang1{
+  width: 700rpx;
+  height: 250rpx;
+  margin-top: 10rpx;
+  margin-left: 24rpx;
+  display: flex;
+  flex-direction: row;
+  color: #D1D1D1;
+  font-size: 30rpx;
+}
+.sctp{
+  width: 700rpx;
+  height: 200rpx;
+  margin-top: 10rpx;
+  margin-left: 24rpx;
+  display: flex;
+  flex-direction: row;
+}
+.zp{
+  height: 200rpx;
+  width: 200rpx;
+  margin-left: 20rpx;
+}
+.pj{
+  width: 560rpx;
+  height: 80rpx;
+  color: white;
+  background-color: #59BBEA;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  margin-left: 95rpx;
+  margin-top: 400rpx;
+}

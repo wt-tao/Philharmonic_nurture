@@ -1,0 +1,132 @@
+<!--pages/guidance/guidance.wxml-->
+<import src="../../utils/wetoast.wxml"/>
+<view class='zong'>
+<view class='kuang'>
+   <view class='colum' >
+      <view class='head'>套餐选择：</view>
+      
+      <template is="wetoast" data="{{...__wetoast__}}"/>
+  </view>
+  <scroll-view style='white-space: nowrap;width:100%' scroll-x>
+    <view class='js'  >
+    
+
+                      <view class='js1' bindtap='qx' wx:for='{{sqArray}}'  data-service='{{item.serviceComboTimes}}' data-index="{{index}}" data-id='{{item.id}}'  id='{{item.couldToDoor}}'>
+                          <view class='js_tp'>
+                            <image class='quan' wx:if="{{item.selected}}" src='../../image/radioG@2x.png'></image>
+                              <image class='quan' wx:else src='../../image/radioW@3x.png' ></image>
+                            
+                              <image style='width:100%;height:100%;margin-top:-50rpx;' src='{{url}}/{{item.img}}' mode='widthFix' ></image>
+                          </view>
+                          <view class='js_name'>
+                            <view class='wz'>{{item.name}}</view>
+                          </view>
+              
+                      </view>
+    
+    </view>
+ </scroll-view>
+  <view class='colum' wx:if='{{couldToDoor==0}}'>
+      <view class='head'>服务类型：</view>
+      <picker name="picker_hx" value="{{qy}}"  range="{{qysArray}}"  bindchange="bindQyChange">  
+              <view class="picker10"> 
+                <text class="bir10" >{{qyArray[qy]}}</text>
+              </view>
+                <image class="oopen0" src="../../image/drop@3x.png" ></image>     
+          </picker> 
+     
+  </view>
+    <view class='colum' wx:if='{{couldToDoor==1}}'>
+      <view class='head'>服务类型：</view>
+      <picker name="picker_hx" value="{{qy}}"  range="{{qyArray}}"  bindchange="bindQyChange">  
+              <view class="picker10"> 
+                <text class="bir10" >{{qyArray[qy]}}</text>
+              </view>
+                <image class="oopen0" src="../../image/drop@3x.png" ></image>     
+          </picker> 
+     
+  </view>
+  
+  <view class='cloum9' wx:if='{{service.length!=0}}'>
+      <view class='tou'>次数选择：</view>
+         <scroll-view style='white-space: nowrap;width:100%;' scroll-x > 
+          <view class='ly' style='margin-left:30rpx;margin-top:10rpx;' >
+            <block wx:for='{{service}}' wx:key='service'>
+              <view class='serviceComboTimes {{item.checked?"checked_parameter":""}}'   style='margin-left:20rpx;' id='{{item.price}}' bindtap='xzcs' data-id='{{item.id}}' data-cs='{{item.id}}' data-toDoorPrice='{{item.toDoorPrice}}'>{{item.name}}</view>
+              </block>
+          </view>
+         </scroll-view> 
+  </view>
+     <view class='cloum9'>
+      <view class='tou'>联系人：</view>
+      <view class='ly' style='border: 1rpx solid #DFDFDF;'>
+         <input class='ly' bindinput='contact' style='margin-left:10rpx;'></input>
+      </view>
+  </view>
+  <view class='cloum9'>
+      <view class='tou'>联系电话：</view>
+      <view class='ly' style='border: 1rpx solid #DFDFDF;'>
+         <input class='ly' bindinput='contactPhone' style='margin-left:10rpx;'></input>
+      </view>
+  </view>
+ 
+</view>
+
+
+
+
+<view class='kuang1'>
+  <view class='zy' style=' color: #FF6600'>请注意：</view>
+  <view class='zy1'  wx:for='{{zy}}'>
+      <view class='d'>·</view>
+      <text class='ku'>{{zy[index]}}</text>
+  </view>
+  <!-- <view class='zy' style='height:70rpx;'>
+      <view class='d' style='height:70rpx;'>·</view>
+      <view class='ku' style='height:70rpx;'>服务时间在20：00后须加收服务费50元!</view>
+  </view> -->
+  </view>
+</view> 
+
+
+<view class='tj'>
+    <view class='zj'>总价：</view>
+    <view class='nm' wx:if='{{qy==0}}'>￥{{price}}</view>
+    <view class='nm'  wx:if='{{qy==1}}'>￥{{toDoorPrice}}</view>
+    <!-- <view class='nm' wx:if='{{qy==1}}'>￥{{price+door2doorPrice}}.00</view> -->
+    <view class='anniu1' bindtap='tj'>提　　交</view>
+</view>
+<!-- </view> -->
+
+
+   <view class='dibu'>
+          <view class='xx' bindtap='index'>
+              <image class='xx_12' src='../../image/home@3x.png'></image>
+              <text style='font-size:26rpx;' class='zit'>首页</text>
+          </view>
+          <view class='xx' bindtap='yuyue'>
+                <view class='u1' style='background-color: #59BBEA;'>
+                    <image class='xx_11' src='../../image/orderW@3x.png'></image>
+                </view>
+                <text style='font-size:26rpx;margin-top:-1rpx;color:#62ABD4;' class='zit'>商城</text>
+          </view>
+          <!-- <view class='xx' bindtap='active'>
+              <image class='xx_12' src='../../image/activity@3x.png'></image>
+              <text style='font-size:26rpx;' class='zit'>活动</text>
+          </view> -->
+          <view class='xx' bindtap='active'>
+              <view class='tables'>
+                    <image class='xx_123' src='../../image/video.png'></image>
+              </view>
+            <text style='font-size:26rpx;' class='zit'>视频</text>
+          </view>
+          <view class='xx' bindtap='cart'>
+              <image class='xx_12' src='../../image/cart2@3x.png'></image>
+              <text style='font-size:26rpx;' class='zit'>购物车</text>
+          </view>
+          <view class='xx' bindtap='my'>
+                <image class='xx_12' src='../../image/my@3x.png'></image>
+                <text style='font-size:26rpx;' class='zit'>我的</text>
+          </view>
+
+        </view>

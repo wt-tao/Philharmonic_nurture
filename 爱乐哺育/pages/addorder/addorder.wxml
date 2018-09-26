@@ -1,0 +1,108 @@
+<import src="../../utils/wetoast.wxml"/>
+<view class='pa'>
+<view class='kuang'>
+  <view class='cloum' wx:if='{{show}}'>
+      <view class='tou'>门店选择：</view>
+       <picker name="picker_hx" value="{{dianArray[dian]}}"  range="{{dianArray}}" data-selecthx="{{dianArray[dian].name}}"  bindchange="binddianChange" range-key="{{'name'}}">  
+              <view class="picker1"> 
+                <text class="bir1" style='font-size:36rpx;'>{{dianArray[dian].name}}</text>
+              </view>
+                <image class="open3" src="../../image/drop@3x.png" ></image>     
+          </picker> 
+  </view>
+  <view class='cloum'>
+      <view class='tou'>服务次数：</view>
+      <view class='cs' >
+          <block  wx:for='{{count_all}}'>
+            <view class='q'  style="background-color:{{(index<count_make&&'#ECECEC')||(index==count_make&&'#FFA200')||(index>count_make&&'#66CBFF')}};">{{index+1}}</view>
+          </block>
+      </view>
+  </view>
+  <view class='cloum'>
+      <view class='tou'>服务时间：</view>
+      <input class='year'  placeholder='2018'  style='width:100rpx' bindblur='year'/>
+      <text style='margin-top:25rpx;margin-left:20rpx;font-size:30rpx;'>年</text>
+          <picker name="picker_hx" value="{{sex}}"  range="{{sexArray}}"  bindchange="bindSixChange">  
+              <view class="picker"> 
+                <text class="bir" >{{sexArray[sex]}}</text>
+              </view>
+               <image class="open" src="../../image/drop@2x.png" ></image>    
+          </picker> 
+          <text style='margin-top:25rpx;margin-left:10rpx;font-size:30rpx;'>月</text>
+            <picker name="picker_hx" value="{{sex1}}"  range="{{sexArray1}}"  bindchange="bindSix1Change">  
+              <view class="picker"> 
+                <text class="bir" >{{sexArray1[sex1]}}</text>
+              </view>
+               <image class="open1" src="../../image/drop@3x.png" ></image>    
+          </picker> 
+          <text style='margin-top:25rpx;margin-left:10rpx'>日</text>
+                
+  </view>
+  <view class='cloum'>
+      <view class='tou'>服务时段：</view>
+       <picker name="picker_hx" value="{{time}}"  range="{{timeArray}}"  bindchange="bindTimeChange">  
+              <view class="picker1"> 
+                <text class="bir1" >{{timeArray[time]}}</text>
+              </view>
+                <image class="open2" src="../../image/drop@3x.png" ></image>     
+          </picker> 
+  </view>
+  <view class='cloum'>
+      <view class='tou'>联系人：</view>
+      <input class='ly' bindinput='contact'></input>
+  </view>
+  <view class='cloum'>
+      <view class='tou'>联系电话：</view>
+      <input class='ly' bindinput='contactPhone'></input>
+  </view>
+  <view class='cloum'>
+      <view class='tou'>留　　言：</view>
+      <input class='ly' bindinput='leaveMessage'></input>
+  </view>
+</view>
+ <template is="wetoast" data="{{...__wetoast__}}"/>
+<view class='kuang1'>
+  <view class='zy' style=' color: #FF6600'>请注意：</view>
+  <view class='zy1' style='height:70rpx;'>
+      <view class='d'>·</view>
+      <view class='ku'>服务距离范围为技师所在位置5公里内,超出该范围每公里须加收服务费5元!</view>
+  </view>
+  <view class='zy' style='height:60rpx;'>
+      <view class='d' style='height:60rpx;'>·</view>
+      <view class='ku' style='height:60rpx;'>服务时间在20：00后须加收服务费50元!</view>
+  </view>
+</view>
+<view wx:if='{{id>1}}' bindtap='tj' class='tj' >提交预约信息</view>
+<view wx:if="{{id<2}}" class='tj'  bindtap='tjs' >提交预约信息</view>
+</view>
+<view class='dibu'>
+          <view class='xx' bindtap='index'>
+              <image class='xx_12' src='../../image/home@3x.png'></image>
+              <text style='font-size:26rpx;' class='zit'>首页</text>
+          </view>
+          <view class='xx' bindtap='yuyue'>
+                <view class='u1' style='background-color: #59BBEA;'>
+                    <image class='xx_11' src='../../image/orderW@3x.png'></image>
+                </view>
+                <text style='font-size:26rpx;margin-top:-1rpx;color:#62ABD4;' class='zit'>商城</text>
+          </view>
+          <!-- <view class='xx' bindtap='active'>
+              <image class='xx_12' src='../../image/activity@3x.png'></image>
+              <text style='font-size:26rpx;' class='zit'>活动</text>
+          </view> -->
+          <view class='xx' bindtap='active'>
+              <view class='tables'>
+                    <image class='xx_123' src='../../image/video.png'></image>
+              </view>
+            <text style='font-size:26rpx;' class='zit'>视频</text>
+          </view>
+          <view class='xx' bindtap='cart'>
+              <image class='xx_12' src='../../image/cart2@3x.png'></image>
+              <text style='font-size:26rpx;' class='zit'>购物车</text>
+          </view>
+          <view class='xx' bindtap='my'>
+                <image class='xx_12' src='../../image/my@3x.png'></image>
+                <text style='font-size:26rpx;' class='zit'>我的</text>
+          </view>
+
+        </view>

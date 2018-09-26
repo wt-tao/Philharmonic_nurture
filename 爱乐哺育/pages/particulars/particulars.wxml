@@ -1,0 +1,35 @@
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class='page'>
+<view class='tp'>
+  <image style='height:300rpx;width:740rpx;' src='{{url}}/{{detailList.img}}' mode='aspectFill'></image>
+  <view class='hz' style="opacity:{{0.4}}">
+      <view class='bt' >{{detailList.name}}</view>
+  </view>
+</view>
+<view class='xq'>
+  <view class='neir'>
+      <template is="wxParse" data="{{wxParseData:da.nodes}}"/> 
+  </view>
+</view>
+
+<view class='pj'>
+    <view class='biaot'>服务评价</view>
+    <view class='pjnr' wx:for='{{appraiseList}}'>
+      <view class='tx'>
+        <image style='height:100%;width:100%;' src='{{url}}/{{item.headImg}}'></image>
+      </view>
+      <view class='nc'>
+        <view class='tm'>
+          <view class='mz'>{{item.nickname}}</view>
+          <view class='time'>{{item.createDate}}</view>
+        </view>
+        <view class='text'>{{item.content}}</view>
+      </view>
+    </view>
+
+</view>
+</view>
+<view class='dib'>
+  <view class='an' bindtap='goumai' style='background-color: #42B3ED;margin-left:2.5%' id='{{detailList.id}}'>下单购买</view>
+  <!-- <view class='an' style='background-color: #42B3ED;margin-left:2%' bindtap='addorder' id='{{detailList.id}}'>预约服务</view> -->
+</view>

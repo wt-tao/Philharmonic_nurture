@@ -1,0 +1,109 @@
+<import src="../../utils/wetoast.wxml"/>
+<block wx:if='{{show}}'>
+    <view class='tp'>
+      <image style='height:200rpx;width:100%' src='../../image/zcbg.jpg' mode="scaleToFill"></image>
+      <view class='reg'>注册会员</view>
+    </view>
+    <view class='kuang'>
+        <view class='tel'>
+            <view class='telphone'>手机号：</view>
+            <input class='input' bindinput='phone' type='number' maxlength='11'></input>
+        </view>
+        <view class='tel'>
+            <view class='telphone' style='width:200rpx;'>验证码：</view>
+            <input class='input' style='width:200rpx;' bindinput='yzm' type='number' maxlength='6'></input>
+            <view class='yzm'  wx:if="{{!isShow}}"  bindtap='getCode'>点击获取验证码</view>
+            <view class='yzm' wx:if="{{isShow}}">已发送{{sec}}</view>
+        </view>
+        <view class='tel'>
+            <view class='telphone'>密码：</view>
+            <input class='input' type='password' bindinput='password'></input>
+        </view>
+        <view class='tel'>
+            <view class='telphone'>确认密码：</view>
+            <input class='input' type='password'  bindinput='psw_'></input>
+        </view>
+        <view class='tel'>
+            <view class='telphone'>推荐码：</view>
+            <input class='input' bindinput='referralCode'></input>
+        </view>
+    </view>
+    <template is="wetoast" data="{{...__wetoast__}}"/>
+      <view class='next' bindtap='hha'>下一步</view>
+
+</block>
+
+<block wx:if='{{show1}}'>
+    <view class='tp' style='height:150rpx;'>
+      <image style='height:150rpx;width:100%' src='../../image/zcbg.jpg' mode="scaleToFill"></image>
+      <view class='reg1' style='width:250rpx;'>会员信息补充</view>
+    </view>
+    <view class='kuang' style='height:850rpx;'>
+        <view class='tel1'>
+            <view class='telphone1'><text style='color:red'>* </text>您的姓名：</view>
+            <input class='input1' bindinput='name' ></input>
+        </view>
+        <view class='tel1'>
+            <view class='telphone1'><text style='color:red'>* </text>您的性别：</view>
+            <view class='input1' style='display: flex;flex-direction: row;'>
+              <icon type="success" size="25" id='1' color="#42A7DF" wx:if="{{s1}}" class="group" bindtap="i1"/>
+              <icon type="circle" size="25" color="#42A7DF" id='1' wx:if="{{s2}}" class="group"  bindtap="i2"/>
+              <view class='dianj'> 男</view>
+               
+            <icon type="success" size="25" id='0' color="#42A7DF" wx:if="{{s3}}" class="group1" bindtap="ic1"/>
+            <icon type="circle" size="25" id='0' color="#42A7DF" wx:if="{{s4}}" class="group1"  bindtap="ic2"/>
+           <view class='dianj'> 女</view>
+              
+            </view>
+          
+        </view>
+        <view class='tel1'>
+            <view class='telphone1'><text style='color:red'>* </text>您的年龄：</view>
+            <input class='input1' bindinput='age' type='number'></input>
+        </view>
+         <view class='tel1'>
+            <view class='telphone1' >宝宝预产日期：</view>
+            <view class='input1'  ><!-- bindblur='dueDate_' -->
+             <picker mode="date" value="{{date}}"  bindchange="bindDateChange">
+               <view class="picker" style='width:300rpx;height:100rpx;line-height:100rpx'>
+                  {{date}}
+               </view>
+            </picker>
+           </view>
+            <!-- <text class='wz'>例：2017-01-01</text> -->
+        </view>
+         <view class='tel1'>
+            <view class='telphone1' >宝宝出生日期：</view>
+              <view class='input1'  ><!-- bindblur='dueDate_' -->
+             <picker mode="date" value="{{time}}"  bindchange="bindDatesChange">
+               <view class="picker" style='width:300rpx;height:100rpx;line-height:100rpx'>
+                  {{dates}}
+               </view>
+            </picker>
+           </view>
+        </view>
+            <view class='tel1'>
+            <view class='telphone1' >宝宝性别：</view>
+            <view class='input1' style='display: flex;flex-direction: row;'>
+              <icon type="success" size="25" id='1' color="#42A7DF" wx:if="{{b1}}" class="group" catchtap="b1"/>
+              <icon type="circle" size="25" id='1'  color="#42A7DF" wx:if="{{b2}}" class="group"  catchtap="b2"/>
+              <view class='dianj'> 男</view>
+               
+            <icon type="success" size="25" id='0' color="#42A7DF" wx:if="{{b3}}" class="group1" catchtap="bc1"/>
+            <icon type="circle" size="25"id='0' color="#42A7DF" wx:if="{{b4}}" class="group1"  catchtap="bc2"/>
+           <view class='dianj'> 女</view>
+              
+            </view>
+          
+        </view>
+        <view class='tel1'>
+            <view class='telphone1'><text style='color:red'>* </text>联系电话：</view>
+            <input class='input1' bindinput='contactPhone' type='number' maxlength='11'></input>
+        </view>
+        <view class='tel1'>
+            <view class='telphone1'><text style='color:red'>* </text>邮寄地址：</view>
+            <input class='input1' placeholder='详细地址' placeholder-style='color:#CCCCCC;font-size:30rpx;' bindinput='position'></input>
+        </view>
+    </view>
+      <view class='next' bindtap='tj'>提交</view>
+</block>

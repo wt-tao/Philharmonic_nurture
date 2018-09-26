@@ -1,0 +1,48 @@
+<!--pages/account/account.wxml-->
+<view class='head'>
+    <view class='kuang' bindtap='shippingInfo'>
+      <view class='name'>{{zl.name}}　　　{{zl.phone}}</view>
+      <view class='addres'>{{zl.address}}</view>
+      <view class='bz'>注：服务、培训、课程不在配送范围！</view>
+    </view>
+    <view class='jt'>
+      <image style='height:50rpx;width:35rpx' src='../../image/right@3x.png'></image>
+    </view>
+</view>
+<view class='kuang1'>
+  <view class='number'>
+    <view  class='tp' >
+      <scroll-view class='tup' scroll-x="true" style=" white-space: nowrap; display: flex" wx:for='{{tp}}'> 
+         <image  style='width:150rpx;height:150rpx' src='{{url}}/{{tp[index]}}' mode='aspectFill'></image> 
+      </scroll-view> 
+    </view>
+  
+  </view>
+  <view class='zf'>
+      <view class='zfps'>支付配送</view>
+      <view class='zfps' style='text-align: right;margin-right:20rpx;'>在线支付</view>
+  </view>
+  <view class='zf1'>商家指定快递</view>
+  <view class='zf1' style='text-align:left;margin-left:20rpx;color:#FF930C'>联系电话：{{contactPhone}}<text style='margin-left:200rpx;border: 1rpx solid #c5c5c5;color:#c5c5c5;padding-top:10rpx;padding-left:10rpx;padding-right:10rpx;padding-bottom:10rpx;' catchtap='tel' id='{{contactPhone}}'>点击拨号</text></view>
+</view>
+<view class='jf'>
+  <view class='kyjf'>可用{{integral}}积分，可抵扣{{dk}}元</view>
+  <view class='gou' bindtap='goux'>
+    <image wx:if='{{gx}}' style='height:100%;width:100%' src='../../image/selectD@3x.png' ></image>
+  </view>
+</view>
+
+<view class='order'>
+  <view class='money'>
+      <view class='spmoney'>商品金额</view>
+      <view class='spmoney' style='text-align: right;color:#FF7A2B'>￥{{total_price}}</view>
+  </view>
+  <view class='money'>
+      <view class='spmoney'>积分抵扣</view>
+      <view class='spmoney' style='text-align: right;color:#FF7A2B'>-￥{{dkc}}</view>
+  </view>
+ <view class='money' style='height:100rpx;margin-top:20rpx;width:720rpx'>
+       <view class='spmoney1'>实际付款：￥{{sjcprice}}</view>
+       <view class='dingdan' bindtap='zhifu'>提交订单</view>
+  </view>
+</view>

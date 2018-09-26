@@ -1,0 +1,65 @@
+<!--搜索框  -->
+ <!-- <view class='ss'>
+     <view class='serach'>
+          <image src='../../image/search2@2x.png' mode='widthFix' class='serach_icon' bindtap='sous'></image>
+          <input placeholder='请输入关键字搜索' class='serach_input' placeholder-style='color:#5DBFE7' bindblur='inpu'/>
+     </view>
+  </view> -->
+  <view class="panel">
+<!--选项卡-->
+    <view class="swiper-tab"> 
+      <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav" id="18">商品</view> 
+      <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav" id="23">文章</view> 
+
+    </view>
+    
+<!--内容-->
+    <swiper current="{{currentTab}}" class="swiper-box" bindchange='currentTabs'  style="height:1100rpx;overflow: scroll;" > 
+      <!--服务-->
+      <swiper-item  style="overflow: scroll;"> 
+        <view class='bg' >
+          <view class='sp' wx:for='{{comdList}}'>
+          <navigator url='../commodity/commodity?id={{item.id}}'>
+              <view class='tp-1'>
+                   <image style='width:100%;height:100%' src='{{url}}/{{item.imgs}}' mode="aspectFill"></image>
+              </view>
+              <view class='mc'>{{item.name}}</view>
+              <view class='price'>
+                <view class='sj'>￥{{item.price}}.00</view>
+                <view class='ys'>已售：{{item.salesCount}}件</view>
+              </view>
+              <view class='mc' style='font-size:30rpx; height:40rpx ；color:#ADADAD;border-bottom:1rpx solid #DEDEDE'>品牌：{{item.brand}}</view>
+              </navigator>
+              <view class='price' style='height:60rpx;width:300rpx'>
+                  <view class='sj' style='height:60rpx;'>
+                  
+                  </view>
+                <view class='ys' style='height:60rpx;'>
+                    <view style='width:130rpx;margin-left:30rpx;text-align: center; line-height: 60rpx; font-size:28rpx;border: 1rpx solid #808080; border-radius: 5rpx' bindtap='qx' id='{{item.id}}'>取消收藏</view>
+                </view>
+              </view>
+          </view>
+        </view>
+        
+      </swiper-item> 
+
+
+      <swiper-item  style="height:1100rpx;overflow: scroll;"> 
+      
+        <view class='list' >
+          
+          <view class='kuang' bindtap='particularst' wx:for="{{listArray}}" >
+            <navigator url='../sparticularst/sparticularst?id={{item.id}}'>
+                <view class='name'>{{item.name}}</view>
+                <view class='time'>更新时间：{{item.updateDate}}</view>
+            </navigator>
+          </view>
+        </view>
+      </swiper-item> 
+
+  
+ 
+  </swiper> 
+
+</view>
+

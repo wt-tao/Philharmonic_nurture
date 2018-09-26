@@ -1,0 +1,13 @@
+<!--pages/seek/seek.wxml-->
+<view class='seek'>
+  <input class='seek_input' placeholder='{{search}}' placeholder-style='font-size:32rpx;color:#ADADAD' bindinput='input'></input>
+  <view class='seek_botton' bindtap='ss'>搜索</view>
+</view>
+<view class='xs' wx:if='{{show}}'>包含“<text style='color:#FF6705'>{{sear}}</text>”的内容有{{totalCount}}条</view>
+<view class='kuang'>
+  <view class='xians' wx:for='{{list}}' bindtap='tz' id='{{item.id}}' data-id='{{item.extraData}}'>
+      <view class='tel'>{{item.name}}</view>
+      <view class='type' wx:if='{{item.extraData<2}}'>类别：商品</view>
+      <view class='type' wx:if='{{item.extraData>1}}'>类别：文章</view>
+  </view>
+</view>

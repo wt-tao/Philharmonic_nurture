@@ -1,0 +1,44 @@
+<view class='kuang'>
+  <view class='tp'>
+    <image src='{{img}}' style='width:100%;height:100%'></image>
+  </view>
+  <view class='xixi'>
+      <view class='xingx'>
+          <view class='wz'>服务评价：</view>
+          <view class='xx'  bindtap="myStarChoose1">
+                 <block wx:for="{{starMap}}">
+              <image wx:if="{{star1>=index+1}}" style="padding-right: 20rpx;width:40rpx;height:40rpx;margin-top:30rpx;"  data-star="{{index+1}}" src='../../image/StarsG@3x.png'></image>
+              <image wx:if="{{star1<index+1}}" style="padding-right: 20rpx;width:40rpx;height:40rpx;margin-top:30rpx;"  data-star="{{index+1}}" src='../../image/StarsW@3x.png'></image>
+            </block>
+          </view>
+      </view>
+       <view class='xingx'>
+          <view class='wz'>手法评价：</view>
+          <view class='xx'  bindtap="myStarChoose2">
+                 <block wx:for="{{starMap}}">
+              <image wx:if="{{star2>=index+1}}" style="padding-right: 20rpx;width:40rpx;height:40rpx;margin-top:30rpx;"  data-star="{{index+1}}" src='../../image/StarsG@3x.png'></image>
+              <image wx:if="{{star2<index+1}}" style="padding-right: 20rpx;width:40rpx;height:40rpx;margin-top:30rpx;"  data-star="{{index+1}}" src='../../image/StarsW@3x.png'></image>
+            </block>
+          </view>
+      </view>
+       <view class='xingx'>
+          <view class='wz'>效果评价：</view>
+          <view class='xx'  bindtap="myStarChoose">
+                 <block wx:for="{{starMap}}">
+              <image wx:if="{{star>=index+1}}" style="padding-right: 20rpx;width:40rpx;height:40rpx;margin-top:30rpx;"  data-star="{{index+1}}" src='../../image/StarsG@3x.png'></image>
+              <image wx:if="{{star<index+1}}" style="padding-right: 20rpx;width:40rpx;height:40rpx;margin-top:30rpx;"  data-star="{{index+1}}" src='../../image/StarsW@3x.png'></image>
+            </block>
+          </view>
+      </view>
+  
+  </view>
+</view>
+<textarea class='kuang1' placeholder='本次服务您还满意吗?说说你的体会和建议吧' placeholder-style='font-size:26rpx;background-color: #D1D1D1; ' bindblur='wb'></textarea>
+
+
+<view class='sctp' >
+    <image class='zp' wx:if='{{show}}' src='{{tempFilePaths}}'></image>
+     <image class='zp' src='../../image/add@3x.png' bindtap='sc'></image>
+</view> 
+
+<view class='pj' bindtap='pj'>发表评价</view>

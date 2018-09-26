@@ -1,0 +1,18 @@
+/* pages/logistics/logistics.wxss */
+.kuang{width: 740rpx;height: 250rpx;display: flex;flex-direction: row;margin-left: 4rpx}
+.tp{width: 200rpx;height: 200rpx;margin-top: 25rpx;margin-left: 25rpx;border: 1rpx solid black;}
+.kd{width: 480rpx;height: 250rpx;margin-left: 30rpx;}
+.cloum{width: 100%;height: 75rpx;margin-top: 5rpx;display: flex;flex-direction: row}
+.zt{width: 100%;height: 75rpx;line-height: 75rpx;color: #FF8233}
+.zt1{width: 40%;height: 75rpx;line-height: 75rpx;color: #C7C7C7;font-size: 30rpx;}
+.hex{width: 748rpx;height: 20rpx;background-color:#E6E6E6 }
+.kk{width: 740rpx;height: 100%;margin-left: 4rpx;border: 1rpx solid black;}
+.kdxx{width: 100%;height: 150rpx;display: flex;flex-direction: row;color: #8B8B8B;}
+.dz{width: 40rpx;height: 40rpx;margin-top: 30rpx;margin-left: 40rpx;}
+.sh{width: 23%;height: 120rpx;margin-left: 30rpx;margin-top: 15rpx;font-size: 32rpx;line-height: 70rpx;}
+.wz{width: 57%;height: 120rpx;margin-top: 15rpx;flex-wrap: wrap;line-height: 60rpx;font-size: 28rpx;}
+.time{width: 100rpx;height: 150rpx;margin-left: 30rpx; }
+.day{width: 100rpx;height: 75rpx;text-align: right;}
+.sh1{width: 14%;height: 120rpx;text-align: center; margin-top: 15rpx;font-size: 170rpx;line-height: 40rpx;}
+.wz1{width: 57%;height: 120rpx;margin-top: 15rpx; margin-left: 30rpx; flex-wrap: wrap;line-height: 60rpx;font-size: 28rpx;}
+.shang{width: 100%;height: 50%;font-size: 38rpx; }

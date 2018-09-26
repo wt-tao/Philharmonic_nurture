@@ -1,0 +1,6 @@
+<!--pages/name/name.wxml-->
+<view class='name'>
+  <view class='name_1'>姓　名：</view>
+  <input class='input' placeholder='王丹' bindblur='name' value='{{my.name}}'></input>
+</view>
+<view class='save' bindtap='save'>保存</view>

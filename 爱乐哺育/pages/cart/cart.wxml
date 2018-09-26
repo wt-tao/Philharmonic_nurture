@@ -1,0 +1,167 @@
+<!--pages/cart/cart.wxml-->
+<view class="panel">
+<!--选项卡-->
+    <!-- <view class="swiper-tab"> 
+      <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav" id="18">商品</view> 
+      <!-- <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav" id="23">服务</view> 
+      <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav" id="19">课堂</view>  -->
+      <!-- <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav" id="24">培训</view>  -->
+
+    <!-- </view>  -->
+    
+<!--内容-->
+    <swiper current="{{currentTab}}" class="swiper-box" bindchange='currentTabs'  style="height:920rpx;overflow: scroll;" > 
+      <!--商品-->
+      <swiper-item  style="height:920rpx;overflow: scroll;"> 
+          <!-- <view class='fenlei'>
+             <icon style='margin-top:15rpx' wx:if="{{selectAllStatuss}}" type="success" color="#13A0E5" bindtap="selectAlls"/>
+            <icon style='margin-top:15rpx' wx:else type="circle" color="#13A0E5" bindtap="selectAlls"/>
+             <view style='height:70rpx;line-height: 70rpx;margin-left:20rpx;'>商品</view> 
+          </view> -->
+          <view class='kuangk' wx:for='{{commodity}}'>
+            <view class='quan'>
+                     <!-- wx:if 是否选择显示不同图标 -->
+        <icon wx:if="{{item.selected}}" type="success" color="#13A0E5" bindtap="selectLists" data-index="{{index}}"  id='{{item.id}}'/>
+        <icon wx:else type="circle" bindtap="selectLists" data-index="{{index}}" id='{{item.id}}'/>
+
+            </view>
+            <view class='tpxq'>
+                <image style='width:100%;height:100%' src='{{url}}/{{item.img}}' bindtap='comditiy' id='{{item.id}}' mode="aspectFill"></image>
+            </view>
+            <view class='jiam'>
+              <view class='mingc'>{{item.name}}</view>
+              <view class='mingc' style='font-size:30rpx;color:#A6A6A6'>品牌：{{item.brand}}</view>
+              <view class='mingc' style='height:90rpx;display: flex;flex-direction: row;'>
+                <view class='jiage'>￥{{item.price}}</view>
+                <view class='jiage'>
+                    <view  class='j' bindtap="minusCounts" data-index="{{index}}" id='{{item.chartId}}'>-</view>
+                    <input type="number"  value="{{item.count}}" placeholder='{{item.count}}' class='number' /> 
+                    <view class='j' bindtap="addCounts" data-index="{{index}}" id='{{item.chartId}}'>+</view>
+                </view>
+              </view>
+            </view>
+          </view>
+
+      </swiper-item> 
+
+      <!-- 服务 -->
+      <!-- <swiper-item  style="height:1100rpx;overflow: scroll;"> 
+         <view class='jiesuant'>
+      <view class='quanx' >
+           <!-- wx:if 是否全选显示不同图标 -->
+            <!-- <icon style='margin-top:15rpx' wx:if="{{selectAllStatus}}" type="success" color="#13A0E5" bindtap="selectAll"/>
+            <icon style='margin-top:15rpx' wx:else type="circle" color="#13A0E5" bindtap="selectAll"/>
+            <view class='wenz'>全选</view>
+      </view>
+      <view class='count'>合计：￥{{totalPrice}}</view>
+      <view class='js' bindtap='account'>去结算（0）</view>
+    </view>
+      </swiper-item>  --> 
+
+
+      <!--课堂  -->
+      <!-- <swiper-item  style="height:1100rpx;overflow: scroll;">
+        <view class='jiesuant'>
+      <view class='quanx' > -->
+           <!-- wx:if 是否全选显示不同图标 -->
+            <!-- <icon style='margin-top:15rpx' wx:if="{{selectAllStatus}}" type="success" color="#13A0E5" bindtap="selectAll"/>
+            <icon style='margin-top:15rpx' wx:else type="circle" color="#13A0E5" bindtap="selectAll"/>
+            <view class='wenz'>全选</view>
+      </view>
+      <view class='count'>合计：￥{{totalPrice}}</view>
+      <view class='js' bindtap='account'>去结算（0）</view>
+    </view>
+      </swiper-item> -->
+
+
+      <!-- 培训 -->
+      <!-- <swiper-item  style="height:1100rpx;overflow: scroll;">
+         <view class='fenlei'>
+             <icon style='margin-top:15rpx' wx:if="{{selectAllStatus}}" type="success" color="#13A0E5" bindtap="selectAll"/>
+            <icon style='margin-top:15rpx' wx:else type="circle" color="#13A0E5" bindtap="selectAll"/>
+            <view style='height:70rpx;line-height: 70rpx;margin-left:20rpx;'>培训</view>
+          </view>
+          <view class='kuangk' wx:for='{{training}}'>
+            <view class='quan'>
+                     <!-- wx:if 是否选择显示不同图标 -->
+        <!-- <icon wx:if="{{item.selected}}" type="success" color="#13A0E5" bindtap="selectList" data-index="{{index}}" />
+        <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}"/>
+
+            </view>
+            <view class='tpxq'>
+                <image style='width:100%;height:100%' src='{{url}}/{{item.img}}' mode="aspectFill"></image>
+            </view>
+            <view class='jiam'>
+              <view class='mingc'>{{item.name}}</view>
+              <view class='mingc' style='font-size:30rpx;color:#A6A6A6'>品牌：{{item.brand}}</view>
+              <view class='mingc' style='height:90rpx;display: flex;flex-direction: row;'>
+                <view class='jiage'>￥{{item.price}}.00</view>
+                <view class='jiage'> -->
+                    <!-- <view  class='j' bindtap="minusCount" data-index="{{index}}" id='{{item.chartId}}'>-</view>
+                    <input type="number"  value="{{item.count}}" placeholder='{{item.count}}' class='number' /> 
+                    <view class='j' bindtap="addCount" data-index="{{index}}" id='{{item.chartId}}'>+</view> -->
+                <!-- </view>
+              </view>
+            </view>
+          </view> 
+      </swiper-item> --> 
+  
+  </swiper> 
+
+</view>
+
+ <!--商品计算价格  -->
+ <view class='jiesuant' wx:if='{{comd}}'>
+      <view class='quanx' >
+           <!-- wx:if 是否全选显示不同图标 -->
+            <icon style='margin-top:15rpx' wx:if="{{selectAllStatuss}}" type="success" color="#13A0E5" bindtap="selectAlls"/>
+            <icon style='margin-top:15rpx' wx:else type="circle" color="#13A0E5" bindtap="selectAlls"/>
+            <view class='wenz'>全选</view>
+      </view>
+      <view class='count'>合计：￥{{totalPrices}}</view>
+      <view class='js' bindtap='account'>去结算</view>
+    </view>
+ <!--培训计算价格  -->
+  <!-- <view class='jiesuant'  wx:if='{{fuw}}'>
+      <view class='quanx' > -->
+           <!-- wx:if 是否全选显示不同图标 -->
+            <!-- <icon style='margin-top:15rpx' wx:if="{{selectAllStatus}}" type="success" color="#13A0E5" bindtap="selectAll"/>
+            <icon style='margin-top:15rpx' wx:else type="circle" color="#13A0E5" bindtap="selectAll"/>
+            <view class='wenz'>全选</view>
+      </view>
+      <view class='count'>合计：￥{{totalPrice}}</view>
+      <view class='js' bindtap='account'>去结算（{{countt}}）</view>
+    </view>  -->
+
+<view class='dibu'>
+  <view class='xx' bindtap='index'>
+      <image class='xx_12' src='../../image/home@3x.png'></image>
+      <text style='font-size:26rpx;' class='zit'>首页</text>
+  </view>
+   <view class='xx' bindtap='yuyue'>
+        <image class='xx_12' src='../../image/order@3x.png'></image>
+        <text style='font-size:26rpx;' class='zit'>商城</text>
+  </view>
+   <!-- <view class='xx' bindtap='active'>
+        <image class='xx_12' src='../../image/activity@3x.png'></image>
+      <text style='font-size:26rpx;' class='zit'>活动</text>
+  </view> -->
+   <view class='xx' bindtap='active'>
+              <view class='tables'>
+                    <image class='xx_123' src='../../image/video.png'></image>
+              </view>
+            <text style='font-size:26rpx;' class='zit'>视频</text>
+          </view>
+   <view class='xx' bindtap='cart'>
+   <view class='u1' style='background-color: #59BBEA;'>
+      <image class='xx_11' src='../../image/cartW@3x.png'></image>
+      </view>  
+      <text style='font-size:26rpx;margin-top:-1rpx;color:#62ABD4' class='zit'>购物车</text>
+  </view>
+   <view class='xx' bindtap='my'>
+        <image class='xx_12' src='../../image/my@3x.png'></image>
+        <text style='font-size:26rpx;' class='zit'>我的</text>
+  </view>
+
+</view>
+

@@ -1,0 +1,87 @@
+
+
+.head{
+  margin-top: 80rpx;
+     position: relative;
+}
+
+.slide-image{
+     width: 100%;
+     
+}
+.swiper-item{
+height:322rpx ;
+margin-top: -70rpx;
+}
+.menu-swiper-item{
+height:400rpx ;     
+}
+.ss{
+  width: 100%;
+  height: 80rpx;
+  background-color: #fff;
+
+  /* position: absolute;
+  top:1rpx; */
+  /* border: 1rpx solid black; */
+}
+.serach{
+width: 95%;
+height: 60rpx;
+ display: flex; 
+flex-direction: row;
+border-radius:20rpx;
+  margin: 0 auto;  
+ position: relative;
+ top:10rpx;
+background-color: #f2f2f2;
+/* margin-top: 15rpx; */
+/* border: 1rpx solid black; */
+
+}
+.serach_icon{
+width:44rpx;
+height: 43rpx;
+padding:8rpx 0 0 10rpx;
+position: relative;
+right: -330rpx;
+}
+
+.serach_input{
+   font-size: 25rpx;
+   padding-left:20rpx; 
+   margin-top: 10rpx; 
+}
+.list{
+  width: 740rpx;
+  margin-left: 4rpx;
+  /* height: 720rpx; */
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+.kuang{
+  width: 680rpx;
+  height: 140rpx;
+  border-bottom: 0.1rpx solid #B6B6B6;
+  margin-top: 10rpx;
+  margin-left: 25rpx;
+  display: flex;
+  flex-direction: column;
+}
+.name{
+  width: 650rpx;
+  height: 60rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  line-height: 70rpx;
+}
+.time{
+  width: 650rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  margin-top: 25rpx;
+  font-size: 26rpx;
+  color: #B6B6B6;
+}

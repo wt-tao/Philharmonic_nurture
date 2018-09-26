@@ -1,0 +1,144 @@
+page {
+	background: #FFFFFF;
+
+}
+.find{
+  position: relative;
+  top: 10rpx;
+}
+.panel{
+  width:100%;
+  height:1200rpx;
+  background-color:#FFF;   
+}
+.swiper-tab{ 
+  width: 100%; 
+  border-bottom: 2rpx solid #FFF; 
+  text-align: center; 
+  line-height: 80rpx;
+  } 
+.swiper-tab-item{ 
+  font-size: 30rpx; 
+  display: inline-block; 
+  width: 20%; 
+   
+} .on{ 
+  color:#43A7DD; 
+  border-bottom: 5rpx solid #43A7DD;
+  font-weight: bold;
+  } 
+ 
+.swiper-box{ 
+  height: 100%; 
+  width: 100%; 
+  background-color: #D6D6D6;
+} 
+.kuang{
+  width: 720rpx;
+  border-radius:10rpx; 
+  margin-top: 20rpx;
+  margin-left: 14rpx;
+  background-color: white;
+}
+.dd{
+  width: 650rpx;
+  border-bottom: 1rpx solid #DEDEDE;
+  height: 80rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.ddh{
+  width: 380rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #808080;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.delete{
+  width: 250rpx;
+  height: 80rpx;
+  text-align: right;
+}
+.xixi{
+  width: 670rpx;
+  height: 180rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+.tp{
+  width: 180rpx;
+  height: 160rpx;
+  margin-top: 20rpx;
+}
+.zl{
+  width: 470rpx;
+  height: 180rpx;
+  margin-left: 20rpx;
+}
+.name{
+  width: 470rpx;
+  height: 120rpx;
+  margin-top: 20rpx;
+}
+.mc{
+  width: 100%;
+  height: 50%;
+  font-size: 36rpx;
+  line-height: 60rpx;
+   text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 1;  
+  -webkit-box-orient: vertical;
+}
+.tj{
+  width: 100%;
+  height: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.tjnumber{
+  width: 450rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: right;
+  font-size: 28rpx;
+}
+.price{
+  width: 660rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+   text-align: right;
+  font-size: 28rpx;
+  color: #FF975B;
+}
+.ps{
+  width: 670rpx;
+  height: 120rpx;
+  margin-left: 20rpx;
+}
+.hhz{
+  display: flex;
+  flex-direction: row;
+}
+.ps_wz{
+  width: 200rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 20rpx;
+}
+.ps_wza{
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  
+  text-align: center;
+  font-size: 34rpx;
+}

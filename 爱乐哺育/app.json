@@ -1,0 +1,56 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/my/my",
+    "pages/subscribe/subscribe",
+   "pages/regist/regist",
+    "pages/box",
+    "pages/seek/seek",
+    "pages/leave/leave",
+    "pages/seeks/seeks",
+    "pages/orderps/orderps",
+    
+   
+    "pages/guidance/guidance",
+    "pages/logistics/logistics",
+    "pages/shippingInfo/shippingInfo",
+    
+    "pages/changepassword/changepassword",
+    "pages/datum/datum",
+    "pages/recovery/recovery",
+    "pages/password/password",
+    "pages/list/list",
+    "pages/act_sparticularst/act_sparticularst",
+    "pages/sparticularst/sparticularst",
+    "pages/commodity/commodity",
+    "pages/addorder/addorder",
+    "pages/order/order",
+    "pages/evaluate/evaluate",
+    "pages/serve/serve",
+    "pages/collect/collect",
+    "pages/history/history",
+    "pages/integral/integral",
+    "pages/name/name",
+    "pages/account/account",
+    "pages/cart/cart",
+    "pages/particularss/particularss",
+    "pages/particulars/particulars",
+    "pages/pay/pay",
+    "pages/active/active"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "爱乐哺育",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f8f8f8"
+  },
+    "networkTimeout": {
+      "request": 10000,
+      "connectSocket": 10000,
+      "uploadFile": 10000,
+      "downloadFile": 10000
+    }
+}

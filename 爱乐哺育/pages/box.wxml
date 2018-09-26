@@ -1,0 +1,66 @@
+<!--pages/box.wxml-->
+<!--:
+2044270449
+:
+密码12345678a  -->
+ <!-- <view class='box'>
+    <view class="boxsub {{luckynum==index?'luck':''}}" wx:for='{{box}}' style="{{index>0&&index<4?'top:0;left:'+index*140+'rpx;':(index>3&&index<8?'right:0;top:'+((index-4)*100)+'rpx;':(index>7&&index<12?'bottom:0;right:'+(index-7)*140+'rpx;':(index>11&&index<14?'left:0;bottom:'+(index-11)*100+'rpx;':'')))}} {{index=='4'?'top:0;':''}} {{index=='11'?'left:0;':''}} " wx:key=''>
+    <text class='boxcontent' style='{{item.name.length>6?"line-height:40rpx;margin-top:10rpx;":"line-height:100rpx;"}}'>{{item.name}}</text>
+  
+  </view>
+   <view class="lucky" catchtap="luckyTap">
+        <text class="taplucky">点击抽奖</text>
+        <text class="howMany">您还有<text class="howMany_num" >{{howManyNum}}</text>次抽奖机会</text>
+    </view>
+</view>
+<view class="explain">
+
+</view> -->
+ <!-- <!-- <video class='vid' src='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400' controls  style='width:500rpx;height:400rpx'></video>  -->
+ <!--手写签名  -->
+ <!-- <view class='content'>
+
+   <canvas class='firstCanvas'
+           canvas-id="firstCanvas" 
+           bindtouchmove='move' 
+           bindtouchstart='start' 
+           bindtouchend='end' 
+           bindtouchcancel='cancel'
+           bindlongtap='tap'
+           disable-scroll='true'
+           binderror='error'>
+                    
+   </canvas>
+
+   <button bindtap='clearClick'>清除</button>
+   <button bindtap='saveClick' >保存图片</button>
+   <image id='signatureImg' src='{{signImage}}'></image>
+
+</view> -->
+<!-- <progress show-info='true'  style='margin-left:5%;margin-top:100rpx;' percent='75'  active='true'></progress> -->
+<!-- <swiper
+indicator-dots="{{indicatorDots}}"
+autoplay="{{autoplay}}"
+interval="{{interval}}"
+duration="{{duration}}">
+<block wx:for="{{imgUrls}}" wx:key="index">
+<swiper-item>
+<image src="{{item}}" class="slide-image"
+mode="scaleToFill" mode='aspectFill'/>
+</swiper-item>
+</block>
+</swiper>  -->
+
+<!-- <view bindtap='ddd'>点击</view> -->
+<!-- <view bindtap='takePhoto'>点击</view>
+<canvas canvas-id='attendCanvasId' class='myCanvas'></canvas> -->
+
+<view class='box1' style='width: {{ sysW * 7 }}px'>
+  <view class='dateBox'>{{ year }} - {{ month}}</view>
+  <block wx:for='{{ weekArr }}'>
+    <view style='width: {{ sysW }}px; height: {{ sysW }}px; line-height: {{ sysW }}px;'>{{ item }}</view>
+  </block>
+  <block wx:for='{{ arr }}'>
+    <view style='{{ index == 0 ? "margin-left:" + sysW * marLet + "px;" : "" }}width: {{ sysW }}px; height: {{ sysW }}px; line-height: {{ sysW }}px;' class='{{ item ==  getDate ? "dateOn" : ""}}'>{{ item }}</view>
+  </block>
+</view>

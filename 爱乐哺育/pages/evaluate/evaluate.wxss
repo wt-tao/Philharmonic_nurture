@@ -1,0 +1,76 @@
+.kuang{
+  width: 740rpx;
+  margin-left: 4rpx;
+  height: 300rpx;
+  border-top: 1rpx solid #EDEDED;
+  border-bottom: 1rpx solid #EDEDED;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.tp{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  /* border: 1rpx solid black; */
+}
+.xixi{
+  width: 500rpx;
+  height: 300rpx;
+  margin-left:40rpx;
+}
+.xingx{
+  width: 500rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+.wz{
+  width: 150rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.xx{
+  width: 330rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+.kuang1{
+  width: 700rpx;
+  height: 150rpx;
+  margin-top: 10rpx;
+  margin-left: 24rpx;
+  display: flex;
+  flex-direction: row;
+  color: #D1D1D1;
+  font-size: 30rpx;
+}
+.sctp{
+  width: 700rpx;
+  height: 200rpx;
+  margin-top: 10rpx;
+  margin-left: 24rpx;
+  display: flex;
+  flex-direction: row;
+}
+.zp{
+  height: 200rpx;
+  width: 200rpx;
+  margin-left: 20rpx;
+}
+.pj{
+  width: 560rpx;
+  height: 80rpx;
+  color: white;
+  background-color: #59BBEA;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  margin-left: 95rpx;
+  margin-top: 400rpx;
+}

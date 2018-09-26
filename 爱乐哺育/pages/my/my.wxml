@@ -1,0 +1,83 @@
+<!--pages/my/my.wxml-->
+<view class='bg'>
+  <image class='bgt' src='../../image/bg2.jpg'></image>
+  <view class='quan'>
+  <view class='tx'>
+      <image class='img'  style='width:100%;height:100%;' src='{{url}}/{{my.headImg}}' mode="scaleToFill" ></image>
+  </view>
+  <view class='name'>{{my.nickname}}</view>
+  <view class='time' wx:if='{{code==612}}' bindtap='reg'>{{datas}}</view>
+  <view class='time' wx:else>{{datas}}：{{my.createDate}}</view>
+  <view class='xq'>
+      <view class='list' bindtap='order'>
+          <view class='wz'>我的订单</view>
+          <view class='ts'>({{my.myOrders}})</view>
+          <image style='height:40rpx;width:30rpx;margin-top:30rpx;' src='../../image/right@3x.png'></image>
+      </view>
+       <view class='list' bindtap='serve'>
+          <view class='wz'>我的服务</view>
+          <view class='ts'>({{my.myService}})</view>
+          <image style='height:40rpx;width:30rpx;margin-top:30rpx;' src='../../image/right@3x.png'></image>
+      </view>
+      <view class='list' bindtap='collect'>
+          <view class='wz'>我的收藏</view>
+          <view class='ts'></view>
+          <image style='height:40rpx;width:30rpx;margin-top:30rpx;' src='../../image/right@3x.png'></image>
+      </view>
+      <view class='list' bindtap='history'>
+          <view class='wz' style='width:200rpx;'>我的浏览记录</view>
+          <view class='ts' style='width:420rpx;'></view>
+          <image style='height:40rpx;width:30rpx;margin-top:30rpx;' src='../../image/right@3x.png'></image>
+      </view>
+       <view class='list' bindtap='integral'>
+          <view class='wz'>我的积分</view>
+          <view class='ts'></view>
+          <image style='height:40rpx;width:30rpx;margin-top:30rpx;' src='../../image/right@3x.png'></image>
+      </view>
+      <view class='list' bindtap='datum'>
+          <view class='wz'>个人信息</view>
+          <view class='ts'></view>
+          <image style='height:40rpx;width:30rpx;margin-top:30rpx;' src='../../image/right@3x.png'></image>
+      </view>
+      <view class='list' bindtap='leave'>
+          <view class='wz'>留言</view>
+          <view class='ts'></view>
+          <image style='height:40rpx;width:30rpx;margin-top:30rpx;' src='../../image/right@3x.png'></image>
+      </view>
+  </view>
+  <view class='tc' bindtap='tc'>退出登录</view>
+  </view>
+</view>
+
+
+<view class='dibu'>
+  <view class='xx' bindtap='index'>
+      <image class='xx_12' src='../../image/home@3x.png'></image>
+      <text style='font-size:26rpx;' class='zit'>首页</text>
+  </view>
+   <view class='xx' bindtap='yuyue'>
+        <image class='xx_12' src='../../image/order@3x.png'></image>
+        <text style='font-size:26rpx;' class='zit'>商城</text>
+  </view>
+   <!-- <view class='xx' bindtap='active'>
+        <image class='xx_12' src='../../image/activity@3x.png'></image>
+      <text style='font-size:26rpx;' class='zit'>活动</text>
+  </view> -->
+   <view class='xx' bindtap='active'>
+              <view class='tables'>
+                    <image class='xx_123' src='../../image/video.png'></image>
+              </view>
+            <text style='font-size:26rpx;' class='zit'>视频</text>
+    </view>
+   <view class='xx' bindtap='cart'>
+      <image class='xx_12' src='../../image/cart@3x.png'></image>
+      <text style='font-size:26rpx;' class='zit'>购物车</text>
+  </view>
+   <view class='xx' bindtap='my'>
+   <view class='u1' style='background-color: #59BBEA;'>
+        <image class='xx_11' src='../../image/myW@3x.png'></image>
+         </view> 
+        <text style='font-size:26rpx;margin-top:-1rpx;color:#62ABD4' class='zit'>我的</text>
+  </view>
+
+</view>

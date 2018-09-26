@@ -1,0 +1,21 @@
+<!--pages/shippingInfo/shippingInfo.wxml-->
+<import src="../../utils/wetoast.wxml"/>
+<view class='kuang'>
+<view class='tel'>
+        <view class='telphone'>姓名：</view>
+        <input class='input'  bindinput='name' value='{{pos.name}}' ></input>
+    </view>
+    <view class='tel'>
+        <view class='telphone'>手机号：</view>
+        <input class='input'  bindinput='phone' value='{{pos.phone}}' ></input>
+    </view>
+    <view class='tel'>
+        <view class='telphone'>收货地址：</view>
+        <input class='input'   bindinput='position' value='{{pos.address}}' ></input>
+    </view>
+  </view>
+  <view class='next' bindtap='tj'>提交</view>
+
+
+
+    <template is="wetoast" data="{{...__wetoast__}}"/>

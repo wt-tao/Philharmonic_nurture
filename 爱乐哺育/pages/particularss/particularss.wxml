@@ -1,0 +1,25 @@
+<!--pages/particularss/particularss.wxml-->
+
+<view class='tp'>
+  <image style='height:300rpx;width:740rpx;' src='{{url}}/{{xq.img}}' mode='aspectFill'></image>
+  <view class='hz' style="opacity:{{0.4}}">
+      <view class='bt' >{{xq.name}}</view>
+  </view>
+</view>
+<view class='xq'>
+  <text class='neir' style=" word-break: break-all;" decode="{{true}}">{{xq.introduce}}</text>
+  <view class='jiage'>
+      <view class='pxjg'>培训价格：</view>
+      <view class='jg' >￥{{xq.price}}.00</view>
+  </view>
+</view>
+
+<view class='pj'>
+    <view class='biaot'>课程介绍</view>
+    <text class='pjnr'  style=" word-break: break-all;margin-left:30rpx;" decode="{{true}}">{{xq.listIntroduce}}</text>
+
+</view>
+<view class='dib'>
+  <view class='an' bindtap='gm'  id='{{xq.id}}'>立即购买</view>
+  <view class='an' style='background-color: #42B3ED;margin-left:2%'  bindtap='jiarugwc' id='{{xq.id}}'>加入购物车</view>
+</view>

@@ -1,0 +1,114 @@
+/* pages/particularss/particularss.wxss */
+
+page{
+ background-color: #DEDEDE ;
+}
+.tp{
+  width: 740rpx;
+  height: 300rpx;
+  margin-left: 2rpx;
+}
+.hz{
+  width: 400rpx;
+  height: 150rpx;
+  border: 1rpx solid white;
+  position: absolute;
+  top: 90rpx;
+  left: 170rpx;
+}
+.bt{
+  width: 350rpx;
+  height: 100rpx;
+  background-color: #EDF9FD;
+  margin: auto;
+  color: #144696;
+  margin-top: 25rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-weight:bold ;
+  font-size: 45rpx;
+}
+.xq{
+  width: 740rpx;
+  height: 100%;
+  margin-left: 3rpx;
+  background-color: white;
+}
+.neir{
+  width: 700rpx;
+  height: 280rpx;
+  border-bottom: 1rpx solid #E3E3E3;
+  margin-left: 20rpx;
+  color: #6D6D6D;
+  font-size:26rpx;
+  letter-spacing:6rpx;
+  text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 6;  
+  -webkit-box-orient: vertical;
+}
+.jiage{
+  width: 100%;
+  height: 90rpx;
+  margin-top:10rpx; 
+  display: flex;
+  flex-direction: row;
+}
+.pxjg{
+  width: 200rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 36rpx;
+  margin-left: 280rpx;
+}
+.jg{
+  width: 300rpx;
+   height: 90rpx;
+  line-height: 90rpx;
+   text-align: center;
+  font-size: 40rpx;
+  color:#FE6302;
+
+}
+.pj{
+  width: 740rpx;
+  height: 415rpx;
+  margin-top: 20rpx;
+  background-color: white;
+}
+.biaot{
+  width: 720rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight:600 ;
+  margin-left: 20rpx;
+}
+.pjnr{
+  width: 740rpx;
+  height: 250rpx;
+  border-bottom: 2rpx solid #ECECEC; 
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+  color: #6D6D6D;
+  font-size:26rpx;
+  letter-spacing:6rpx
+}
+
+.dib{
+  width: 740rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+.an{
+  width: 49%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  background-color: #F992B0;
+}

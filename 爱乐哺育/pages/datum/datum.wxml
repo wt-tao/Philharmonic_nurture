@@ -1,0 +1,56 @@
+<!--pages/datum/datum.wxml-->
+<view class='kuang'>
+<view class="material-nic" >头像
+      <view class='tx' >
+          <image class='img' bindtap='imgesa' style='width:100%;height:100%;' src='{{url}}/{{my.headImg}}' mode="scaleToFill" ></image>
+      </view>
+    </view>
+   <view class="material-nic" >昵称
+      <input class="age" placeholder='请输入昵称' bindblur='nickname' value='{{my.nickname}}'></input>
+        <!-- <image class="open" src="../../image/right@2x.png" ></image> -->
+    </view>
+ <view class="material-nic" >姓名
+      <text class="age" bindtap='name' >{{my.name}}</text>
+         <image class="open" src="../../image/right@3x.png" bindtap='name'></image> 
+    </view>
+  <view class="material-nic">性别
+  <!-- <input class="age" placeholder='您的性别' bindblur='age' value='{{my.sex}}'></input>
+         <image class="open" src="../../image/right@2x.png" ></image> 
+    </view> -->
+      <picker name="picker_hx" value="{{sex}}"  range="{{sexArray}}"  bindchange="bindSixChange">  
+     <view class="picker"> 
+          <text class="bir" wx:if='{{sex1}}'>{{sex}}</text>
+          <text class="bir" wx:if='{{sex2}}'>{{sexArray[sex]}}</text>
+         </view>  
+  </picker> 
+          <image class="open" src="../../image/right@3x.png" ></image> 
+    </view> 
+  <view class="material-nic" >年龄
+    <input class="age" placeholder='您的年龄' bindblur='age' value='{{my.age}}' style='margin-top: 15rpx;'></input>
+         <image class="open" src="../../image/right@3x.png" ></image> 
+    </view>
+
+      <view class="material-nic">宝宝出生日期
+     <picker mode="date" value="{{date}}" start="1930-01-01" end="2070-12-31" bindchange="bindDateChange">  
+    <view class="picker1"> 
+       <text class="bir" wx:if='{{rq1}}' >{{my.babyBirth}}</text> 
+      <text class="bir" wx:if='{{rq2}}'>{{dates}}</text>
+      </view>  
+  </picker> 
+        <image class="open" src="../../image/right@3x.png" ></image> 
+    </view>
+
+     <view class="material-nic" >联系电话
+      <input class="age1" placeholder='您的联系电话' bindblur='contactPhone' value='{{my.contactPhone}}' style='margin-top: 15rpx;'></input>
+         <image class="open" src="../../image/right@3x.png" ></image> 
+    </view>
+
+      <view class="material-nic" >邮寄地址
+      <view class="age1"  bindtap='position'></view>
+         <image class="open" src="../../image/right@3x.png" ></image> 
+    </view>
+    <view class="material-nic" bindtap='changepassword' >修改密码
+      <text class="bir"></text>
+         <image class="open1" src="../../image/right@3x.png" ></image> 
+    </view>
+</view>

@@ -1,0 +1,45 @@
+<!--搜索框  -->
+  <view class='ss'>
+     <view class='serach'>
+          <image src='../../image/fdsss.png' mode='widthFix' class='serach_icon' bindtap='ins'></image>
+          <input placeholder='请输入关键字搜索' class='serach_input' bindinput='inpu' />
+     </view>
+  <!-- </navigator> -->
+  </view>
+  <block wx:if='{{show}}'>
+  <view class='kuang12' wx:for='{{data}}'>
+    <view class='time'>
+      <view class='rq'>{{item.time}}</view>
+    </view>
+    <view class='jl' >
+              <view class='sp' wx:for='{{item.list}}' bindtap='comditiy' id='{{item.id}}'>
+                  <view class='tp-1'>
+                      <image  style='width:100%;height:100%' src='{{url}}/{{item.imgs}}' mode="aspectFill"></image>
+                  </view>
+                  <view class='mc'>{{item.name}}</view>
+                  <view class='price'>
+                    <view class='sj'>￥{{item.price}}</view>
+                  </view>
+              </view>          
+    </view>
+  </view>
+  </block>
+            
+<block wx:if='{{show1}}'>
+  <view class='kuang12' wx:for='{{datas}}'>
+    <view class='time'>
+      <view class='rq'>{{item.time}}</view>
+    </view>
+    <view class='jl' >
+              <view class='sp' wx:for='{{item.list}}' bindtap='comditiy' id='{{item.id}}'>
+                  <view class='tp-1'>
+                      <image  style='width:100%;height:100%' src='{{url}}/{{item.imgs}}' mode="aspectFill"></image>
+                  </view>
+                  <view class='mc'>{{item.name}}</view>
+                  <view class='price'>
+                    <view class='sj'>￥{{item.price}}.00</view>
+                  </view>
+              </view>          
+    </view>
+  </view>
+  </block>

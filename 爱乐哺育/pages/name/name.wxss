@@ -1,0 +1,33 @@
+/* pages/name/name.wxss */
+.name{
+  width: 600rpx;
+  height: 80rpx;
+  margin-left: 70rpx;
+  margin-top: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+.name_1{
+  width: 150rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+}
+.input{
+  width: 450rpx;
+  height: 80rpx;
+  border: 1rpx solid #E7E7E7;
+  padding-left: 20rpx;
+}
+.save{
+  width: 450rpx;
+  height: 60rpx;
+  color: white;
+  font-size: 32rpx;
+  background-color: #21A6C2;
+  line-height: 60rpx;
+  text-align: center;
+  margin-left: 150rpx;
+  margin-top: 80rpx;
+  border-radius: 10rpx;
+}

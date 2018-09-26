@@ -1,0 +1,178 @@
+
+        <view class="panel">
+        <!--选项卡-->
+            <view class="swiper-tab"> 
+              <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav" id="18">服务</view> 
+              <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav" id="23">商品</view> 
+              <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav" id="19">课堂</view> 
+              <view class="swiper-tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav" id="24">培训</view> 
+
+            </view>
+            
+        <!--内容-->
+            <swiper current="{{currentTab}}" class="swiper-box swiper-no-swiping"    style="height:1100rpx;overflow-y: scroll;" bindchange='currentTabs'> 
+              <!--服务-->
+              <swiper-item  style="height:1100rpx;overflow-y: scroll;"> 
+              
+                <view class='fuw' wx:for='{{servicesList}}'>
+                    <view class='tp' bindtap='particulars' id='{{item.id}}'>
+                        <image  style='width:100%;height:100%' src='{{url}}/{{item.coverImg}}'mode="scaleToFill"></image>
+                    </view>
+                    <view class='neir'>
+                        <view class='bt'>
+                            <view class='tm' bindtap='particulars' id='{{item.id}}'>{{item.name}}</view>
+                            <view class='sc'>已售：<text style='color:#606060'>{{item.salesCount}}</text>次</view>
+                        </view>
+                        <view class='headsss' bindtap='particulars' id='{{item.id}}'>{{item.describes}}</view>
+                        <view class='an'>
+                          <view class='xd' style='background-color: #59BBEA;margin-left:200rpx;' bindtap='mrzd' id='{{item.id}}'>下单购买</view>
+                          <!-- <view class='xd' style='background-color: #59BBEA;margin-left:15rpx;'  bindtap='addorder' id='{{item.id}}'>预约服务</view> -->
+                        </view>
+                    </view>
+                </view>
+              </swiper-item> 
+
+<!-- 商品 -->
+              <swiper-item  style="height:1100rpx"> 
+              <scroll-view style="height:970rpx;" scroll-y bindscrolltolower='tolower'>
+                <view class='bg'>
+                  <view class='sp' wx:for='{{commodityList}}'  >
+                      <view class='tp-1' bindtap='commodity' id='{{item.id}}'>
+                        <image style='width:100%;height:250rpx;' src='{{url}}/{{item.imgs}}' mode="aspectFill"></image>
+                      </view>
+                      <view class='mc' bindtap='commodity' id='{{item.id}}'>{{item.name}}</view>
+                      <view class='price' bindtap='commodity' id='{{item.id}}'>
+                        <view class='sj'>￥{{item.price}}.00</view>
+                        <view class='ys'>已售：{{item.salesCount}}件</view>
+                      </view>
+                      <view class='mc' style='font-size:30rpx; height:60rpx;line-height:60rpx;color:#ADADAD;border-bottom:1rpx solid #DEDEDE;'>品牌：{{item.brand}}</view>
+                      <view class='price' style='height:70rpx;width:300rpx;margin-top:10rpx;'>
+                           <view class='sj' style='height:60rpx;'>
+                            <image style='width:45rpx;height:45rpx;' src='../../image/collect@2xfill.png'  wx:if='{{s2}}' id='{{item.id}}' bindtap="sc1"></image>
+                            <image style='width:45rpx;height:45rpx;' src='../../image/StarsW@3x.png' bindtap="sc" wx:if='{{s1}}'id='{{item.id}}'></image>
+                          </view> 
+                           <!-- <icon wx:if="{{item.selected}}" type="success" color="rgb(0,255,255)" bindtap="selectLists" data-index="{{index}}" />
+        <icon wx:else type="circle" bindtap="selectLists" data-index="{{index}}"/> -->
+                        <view class='ys' style='height:60rpx;'>
+                            <image style='width:45rpx;height:45rpx;' src='../../image/cart2@3x.png' bindtap='tjgwc' id='{{item.id}}'></image>
+                        </view>
+                      </view>
+                  </view>
+               
+                </view>
+              </scroll-view>
+              </swiper-item> 
+
+              <swiper-item  style="height:1100rpx;overflow: scroll;">
+                <view class='bg'>
+                  <view class='xuanz'>
+                    <view class='select'>
+                        <view class="material-nic">课程类别:
+                          <picker name="picker_hx" value="{{dataList[datas]}}" data-selecthx="{{dataList[datas].name}}" range="{{dataList}}" range-key="{{'name'}}" bindchange="bindDateChange"  >  
+                             <view class="picker1s" >  
+                                 <text class="bir">{{dataList[datas].name}}</text>
+                                  <image class="open" src="../../image/drop@3x.png" style='margin-left: 225rpx;'></image> 
+                             </view>  
+                           </picker> 
+                         
+                         </view>
+                    </view>
+                    <view class='select'>
+                       <view class="material-nic">上课时间:
+                            <picker name="picker_hx" value="{{dataList[datas].times[dates]}}" data-selecthx="{{dataList[datas].times[dates]}}" range="{{dataList[datas].times}}"  bindchange="bindSixChange">  
+                                <view class="picker1s">  
+                                  <text class="bir">{{dataList[datas].times[dates]}}</text>
+                                   <image class="open" src="../../image/drop@3x.png" ></image> 
+                                </view>  
+                          </picker> 
+                           
+                        </view>
+                    </view>
+                      <view class='select'>
+                       <view class="material-nic">课程价格:                           
+                        <text class="bir" style='color:#FF9458;text-align:left;margin-left:50rpx;margin-top:28rpx'>￥{{dataList[datas].price}}</text>                   
+                        </view>
+                    </view>
+                    
+                  </view>
+                  <view class='tianx_1'>
+                        <view class='select'>
+                            <view class='lb' style='margin-left:40rpx;'>宝宝月龄:</view>
+                            <input class='xs' style='width:250rpx;' bindinput='babyMonthAge'></input>
+                            　<view>个月</view>
+                      </view>
+                      <view class='select'>
+                            <view class='lb' style='margin-left:40rpx;'>听课人:</view>
+                            <input class='xs' style='width:310rpx;' bindinput='listen_who'></input>
+                            <view style='font-size:28rpx; color:#AFAFAF'>（可填写多人）</view>
+                      </view>
+                      <view class='select'>
+                          <view class='lb' style='margin-left:40rpx;'>联系电话:</view>
+                          <input class='xs' style='width:410rpx;' bindinput='contactPhone'></input>
+                    </view>
+                  </view>
+                  <view class='kuang'>
+                      <view class='tij'>
+                          <view class='anniu' bindtap='tj' id='{{dataList[datas].price}}'>提交预定信息</view>
+                      </view>
+                      <view class='zy'>请注意：</view>
+                      <view class='dian'>·
+                        <view class='beiz'>服务距离范围为技师所在位置5公里内，超出该范围每公里需加收服务费5元</view>
+                      </view>
+                  </view>
+
+                </view>
+              </swiper-item>
+
+              <swiper-item  style="height:1100rpx;overflow: scroll;">
+                  <view class='kuangk'  wx:for='{{peixunList}}' >
+                    <view class='xctp' bindtap='pxxq' id='{{item.id}}'>
+                        <image style='width:100%;height:100%' src='{{url}}/{{item.coverImg}}' mode="aspectFill"></image>
+                    </view>
+                    <view class='mc_jg'>
+                      <view class='peixunmc' bindtap='pxxq' id='{{item.id}}'>{{item.name}}</view>
+                      <view class='peixunjiage' bindtap='pxxq' id='{{item.id}}'>￥{{item.price}}.00</view>
+                      <view class='lianggean'>
+                        <view class='ckqb' bindtap='pxxq' id='{{item.id}}'>查看全部课程</view>
+                        <view class='ckqb' style='border: 1rpx solid #3D9DCE;color:#3D9DCE;margin-left:4%' bindtap='jiarugwc' id='{{item.id}}'>加入购物车</view>
+                      </view>
+                    </view>
+                  </view>
+              </swiper-item>
+        
+          </swiper> 
+
+        </view>
+
+
+        <view class='dibu'>
+          <view class='xx' bindtap='index'>
+              <image class='xx_12' src='../../image/home@3x.png'></image>
+              <text style='font-size:26rpx;' class='zit'>首页</text>
+          </view>
+          <view class='xx' bindtap='yuyue'>
+                <view class='u1' style='background-color: #59BBEA;'>
+                    <image class='xx_11' src='../../image/orderW@3x.png'></image>
+                </view>
+                <text style='font-size:26rpx;margin-top:-1rpx;color:#62ABD4;' class='zit'>商城</text>
+          </view>
+          <!-- <view class='xx' bindtap='active'>
+              <image class='xx_12' src='../../image/activity@3x.png'></image>
+              <text style='font-size:26rpx;' class='zit'>活动</text>
+          </view> -->
+          <view class='xx' bindtap='active'>
+              <view class='tables'>
+                    <image class='xx_123' src='../../image/video.png'></image>
+              </view>
+            <text style='font-size:26rpx;' class='zit'>视频</text>
+          </view>
+          <view class='xx' bindtap='cart'>
+              <image class='xx_12' src='../../image/cart2@3x.png'></image>
+              <text style='font-size:26rpx;' class='zit'>购物车</text>
+          </view>
+          <view class='xx' bindtap='my'>
+                <image class='xx_12' src='../../image/my@3x.png'></image>
+                <text style='font-size:26rpx;' class='zit'>我的</text>
+          </view>
+
+        </view>

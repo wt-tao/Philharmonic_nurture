@@ -1,0 +1,226 @@
+@import "/wxParse/wxParse.wxss";
+page{
+  background-color: #EDEDED;
+  /* height: 800rpx; */
+}
+.shou{
+  width: 740rpx;
+  margin-left: 4rpx;
+  height: 550rpx;
+  border-bottom: 1rpx solid  #BCBCBC;
+  display: flex;
+  flex-direction: column;
+  background-color: white
+}
+
+    /* /* .swiper-container{  
+      position: relative;  
+    }   */
+    /* .swiper-container .swiper{  
+      height: 500rpx;  
+    }  
+    .swiper-container .swiper .img{  
+      width: 100%;  
+      height: 500rpx;  
+    }  
+    .swiper-container .dots{  
+      position: absolute;  
+      left: 40rpx;  
+      bottom: 20rpx;  
+      display: flex;  
+      justify-content: center;  
+    }  
+    .swiper-container .dots .dot{  
+      margin: 0 10rpx;  
+      width: 20rpx;  
+      height: 10rpx;  
+      background: #fff;  
+      transition: all .6s;  
+      font: 300 18rpx/28rpx "microsoft yahei";  
+      text-align: center;  
+    }  
+    .swiper-container .dots .dot.active{  
+      background: #08DAAE;   
+    }   */ 
+    .slide-image{
+     width: 100%;
+     
+}
+.swiper-item{
+height:322rpx;
+display: block;
+}
+.menu-swiper-item{
+height:360rpx ;     
+}
+    .mc{
+      width: 90%;
+      margin-left: 5%;
+      height: 120rpx;
+      border-bottom: 1rpx solid #E1E1E1;
+      display: flex;
+      flex-direction: row;
+    }
+    .mingc{
+      width: 450rpx;
+      margin-left: 10rpx;
+      margin-top: 20rpx;
+      font-size: 36rpx;
+      text-overflow: -o-ellipsis-lastline;  
+      overflow: hidden;  
+      text-overflow: ellipsis;  
+      display: -webkit-box;  
+      -webkit-line-clamp: 2;  
+      -webkit-box-orient: vertical;
+    }
+    .jiage{
+      width: 200rpx;
+      height: 120rpx;
+      font-size: 40rpx;
+      color: #FC6704;
+      line-height: 120rpx;
+      text-align: right;
+    }
+    .dibu{
+      width: 90%;
+      margin-left: 5%;
+      height: 80rpx;
+      display: flex;
+      flex-direction: row;
+    }
+  .pingp{
+    width: 400rpx;
+    height: 80rpx;
+    font-size: 30rpx;
+    line-height: 80rpx;
+    color: #808080;
+    text-overflow: -o-ellipsis-lastline;  
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+    display: -webkit-box;  
+    -webkit-line-clamp: 1;  
+    -webkit-box-orient: vertical;
+  }
+  .jf{
+    width: 260rpx;
+    height: 80rpx;
+    font-size: 30rpx;
+    line-height: 80rpx;
+    color: #808080;
+    text-align: right;
+  }
+  .xq{
+    width: 740rpx;
+    margin-left: 4rpx;
+    border: 1rpx solid #E8E8E8;
+    margin-top: 30rpx; 
+    background-color: white;
+  }
+  .bt{
+    width: 90%;
+    margin-left: 5%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-weight: 700;
+  }
+  .spxx{
+    width: 90%;
+    margin-left: 5%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 32rpx;
+  }
+  .cp{
+    width: 90%;
+    margin-left: 5%;
+    height: 120rpx;
+     font-size: 28rpx;
+     color: #676767;
+  }
+  .cpcs{
+    width: 100%;
+    height: 60rpx;
+    display: flex;
+    flex-direction: row;
+  }
+  .cs{
+    width: 200rpx;
+    height: 60rpx;
+    line-height: 60rpx
+  }
+  .pm{
+    width: 450rpx;
+    height: 60rpx;
+    line-height: 60rpx
+  }
+  .dd{
+    width: 740rpx;
+    margin-left: 4rpx;
+    height: 115rpx;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    position: fixed;
+    bottom: 0rpx;
+  }
+  .sc{
+    width: 30%;
+    height: 115rpx;
+    line-height: 115rpx;
+    display: flex;
+    flex-direction: row;
+  }
+  .mai{
+    width: 35%;
+    height: 115rpx;
+     text-align: center;
+    line-height: 115rpx;
+    background-color: #F8BAD3;
+    color: white;
+  }
+  .shouc{
+    height: 115rpx;
+    line-height: 115rpx;
+  }
+  .gg{
+    height: 100rpx;
+    margin-top: 15rpx;
+    width: 100%;
+    /* margin-left: 2.5%; */
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    /* border: 1rpx solid black; */
+  }
+  .gg_left{
+    width: 150rpx;
+    margin-top: 10rpx;
+    font-size: 28rpx;
+    color: #808080;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+     /* border: 1rpx solid black; */
+  }
+  .gg_right{
+    width: 580rpx;
+    /* border: 1rpx solid black; */
+    height: 80rpx;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+  }
+
+  .ku_gg{
+    width: 200rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 26rpx;
+    margin-top: 8rpx;
+    color: #808080;
+    border: 1rpx solid #808080;
+    border-radius: 5rpx;
+    display: inline-block; 
+    margin-left: 20rpx;
+  }

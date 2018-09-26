@@ -1,0 +1,116 @@
+<!--index.wxml-->
+<import src="../../utils/wetoast.wxml"/>
+<modal class="modal" hidden="{{modalFlag}}" no-cancel confirmText="取消" bindconfirm="confirm"> 
+    <view class='login'>
+      <text class='texte'>会员登录</text> 
+      <image class='login' src='../../image/loginbg.jpg' mode="scaleToFill"></image>
+    </view>    
+   
+   <view class='tel'>
+      <image class='tb1' src='../../image/phone@3x.png' mode="scaleToFill"></image>
+      <input class='input' placeholder='请输入注册手机号' placeholder-style='color:#cccccc' bindinput='phone'></input> 
+   </view>
+    <view class='tel' style='margin-top:20rpx;'>
+        <image style='height:55rpx;margin-top:25rpx;' class='tb1' src='../../image/password@3x.png' mode="scaleToFill"></image>
+         <input class='input' type='password' placeholder='请输入密码' placeholder-style='color:#cccccc' bindinput='psw'></input>
+   </view>
+   <view class='tell' style='text-align:right;' bindtap='password'>忘记密码？</view>
+ <template is="wetoast" data="{{...__wetoast__}}"/>
+   <view class='an' bindtap='logins'>立即登录</view>
+  <view class='xz'>
+      <view class='res'>还不是会员？
+          <view style='color:#FE7123' bindtap='regist'> 立即注册</view>
+      </view>
+      <!-- <view class='wx' style='color:#2DD12F'>微信号登录</view> -->
+  </view>
+</modal>  
+<scroll-view class='pages' scroll-y>
+<!--搜索框  -->
+
+ <view class='ss'>
+  <!-- <navigator url='../seek/seek'> -->
+     <view class='serach' bindtap='seek'>
+          
+          <input placeholder='请输入关键字搜索' class='serach_input' bindinput='seek_input' />
+          <image src='../../image/fdsss.png' mode='widthFix' class='serach_icon'  id='0'></image>
+     </view>
+  <!-- </navigator> -->
+  </view>
+  <view class='dianj'>
+    <view class='tx' bindtap='wenzhang' wx:for="{{mainList}}" id='{{item.id}}' data-name='{{item.name}}'>
+      <!-- <image class='tb' src="{{url}}/{{item.img}}"></image> -->
+      <text style='margin-left:-20rpx;'>{{item.name}}</text>
+    </view>
+</view>
+<!--轮播图  -->
+<view class='head'>
+     <swiper indicator-dots="true" autoplay="true" interval="3000" indicator-color='white' indicator-active-color='#FF7F01' duration="1000" class="swiper-item" circular="true">
+          <block wx:for="{{bannerList}}" wx:for-index="index">
+              <swiper-item>
+                <image src="{{url}}/{{item.coverImg}}" class="slide-image" style='width:100%;height:100%' mode="aspectFill" id='{{item.article_id}}' bindtap='banner'/>
+              </swiper-item>
+          </block>
+     </swiper>
+</view>
+<!--瀑布流  -->
+<view class='hez'>
+  <!--左  -->
+  <view class='he_left' >
+    <view class='he_left_top' wx:for="{{articleList}}"  id='{{item.id}}' bindtap='list' data-img='{{item.coverImg}}'>
+        <image src='{{url}}/{{item.coverImg}}' style='height:300rpx;width:95%;margin-left:2.5%;order-top-left-radius: 20rpx;border-top-right-radius:20rpx;' mode="aspectFill"></image>
+        <view class='he_tel'>
+            <text class='he_tlte' style='padding-top:20rpx'>{{item.title}}</text>
+            <view class='he_time'>
+                <text class='he_time' style='width:50%;margin-left:15rpx;'>{{item.createDate}}</text>
+                <view class='rt' wx:if='{{item.hot}}'>热荐</view>
+            </view>
+        </view>
+    </view>
+  </view>
+  <!--右  -->
+  <!-- <view class='he_left'>
+     <view class='he_left_top' style='height:455rpx' wx:for="{{articleList}}" wx:if="{{item.id%2==1}}" id='{{item.id}}' bindtap='list'>
+        <image src='{{url}}/{{item.coverImg}}' style='height:305rpx;width:95%;margin-left:2.5%;border-top-left-radius: 20rpx;border-top-right-radius:20rpx;' mode="aspectFill"></image>
+        <view class='he_tel'>
+            <text class='he_tlte' style='padding-top:20rpx'>{{item.title}}</text>
+            <view class='he_time'>
+                <text class='he_time' style='width:50%;margin-left:15rpx;'>{{item.createDate}}</text>
+                <view class='rt' wx:if='{{item.hot}}'>热荐</view>
+            </view>
+        </view>
+    </view>
+  </view> -->
+
+</view>
+</scroll-view>
+<view class='dibu'>
+    <view class='xx'>
+      <view class='u1' style='background-color: #59BBEA;'>
+      <image class='xx_11' src='../../image/homeW@3x.png' mode="aspectFill"></image>
+      </view>
+      <text style='font-size:26rpx;margin-top:-4rpx;color:#62ABD4;margin-left:40rpx;' class='zit'>首页</text>
+  </view>
+   <view class='xx' bindtap='yuyue'>
+        <image class='xx_12' src='../../image/order@3x.png'></image>
+        <text style='font-size:26rpx;' class='zit'>商城</text>
+  </view>
+  <!-- <view >
+     <image class='xx_12' src='../../image/cart@3x.png'></image> 
+    <text style='font-size:26rpx;' class='zit'>视频</text>
+  </view> -->
+    <view class='xx' bindtap='active'>
+        <view class='tables'>
+              <image class='xx_123' src='../../image/video.png'></image>
+        </view>
+      <text style='font-size:26rpx;' class='zit'>视频</text>
+  </view> 
+   <view class='xx' bindtap='cart'>
+      <image class='xx_12' src='../../image/cart@3x.png'></image>
+      <text style='font-size:26rpx;' class='zit'>购物车</text>
+  </view>
+      <view class='xx' bindtap='my'>
+        <image class='xx_12' src='../../image/my@3x.png' mode="aspectFill"></image>
+        <text style='font-size:26rpx;' class='zit'>我的</text>
+  </view>
+
+</view>

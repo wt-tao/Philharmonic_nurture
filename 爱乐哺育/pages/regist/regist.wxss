@@ -1,0 +1,126 @@
+
+.tp{
+  width: 740rpx;
+  margin-left: 4rpx;
+  height: 200rpx;
+}
+.reg{
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 60rpx;
+  left: 270rpx;
+}
+.reg1{
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 35rpx;
+  left: 250rpx;
+}
+.kuang{
+  width: 740rpx;
+  margin-left: 4rpx;
+  height: 700rpx;
+}
+.tel{
+  width: 700rpx;
+  margin-left: 20rpx;
+  height: 100rpx;
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.tel1{
+  width: 700rpx;
+  margin-left: 20rpx;
+  height: 100rpx;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+.telphone{
+  width: 200rpx;
+  height: 100rpx;
+  text-align: right;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  /* border: 1rpx solid black */
+}
+.telphone1{
+  width: 300rpx;
+  height: 100rpx;
+  text-align: right;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  /* border: 1rpx solid black */
+}
+.input{
+  width: 460rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  border: 1rpx solid #E0E0E0;
+  margin-left: 20rpx;
+  padding-left:20rpx; 
+  }
+  .input1{
+  width: 350rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  border: 1rpx solid #E0E0E0;
+  margin-left: 20rpx;
+  padding-left:20rpx; 
+  }
+.input1{
+  width: 540rpx;
+  height: 100rpx;
+}
+.yzm{
+  width: 250rpx;
+  height: 70rpx;
+  margin-top: 15rpx;
+  border-radius: 15rpx;
+  color: white;
+  background-color: #282828;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 70rpx;
+  margin-left: 20rpx;
+}
+.next{
+  width: 650rpx;
+  height: 80rpx;
+  background-color: #42A7DF;
+  margin-left: 50rpx;
+  color: white;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  margin-top: 50rpx;
+  border-radius: 10rpx;
+}
+.dianj{
+  margin-left: 10rpx;
+  margin-top: 27rpx;
+}
+.group{
+  margin-top: 25rpx;
+  /* margin-left: 10rpx; */
+}
+.group1{
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+}
+.wz{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+   color: #D3D3D3; 
+  width: 225rpx;
+}

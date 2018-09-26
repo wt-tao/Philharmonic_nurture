@@ -1,0 +1,159 @@
+
+.pb{
+  position: relative;
+   top: 20rpx; 
+   background-color: #EDEDED
+}
+.head{
+  margin-top: 10rpx;
+     position: relative;
+}
+
+.slide-image{
+     width: 100%;
+     
+}
+.swiper-item{
+height:323rpx ;
+}
+.menu-swiper-item{ 
+height:350rpx ;     
+}
+.ss{
+  width: 100%;
+  height: 80rpx;
+  background-color: #fff;
+
+  /* position: absolute;
+  top:1rpx; */
+  /* border: 1rpx solid black; */
+}
+.serach{
+width: 95%;
+height: 60rpx;
+ display: flex; 
+flex-direction: row;
+border-radius:20rpx;
+  margin: 0 auto;  
+ position: relative;
+ top:10rpx;
+background-color: #f2f2f2;
+/* margin-top: 15rpx; */
+/* border: 1rpx solid black; */
+
+}
+.serach_icon{
+width:44rpx;
+height: 43rpx;
+padding:8rpx 0 0 10rpx;
+position: relative;
+right: -330rpx;
+}
+
+.serach_input{
+   font-size: 25rpx;
+   padding-left:20rpx; 
+   margin-top: 10rpx; 
+}
+
+.waterfall {
+  width: 100%;
+  position: relative;
+}
+
+.img_box {
+  width: 50%;
+  position: absolute;
+  text-align: center;
+  animation: fadeShow 1s;
+}
+
+.img_box image {
+  width: 94%;
+}
+
+.item_desc {
+  font-size: 24rpx;
+}
+
+.loading_box {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 1000;
+  bottom: 30rpx;
+  left: 49%;
+}
+
+.loading_fade_circle {
+  width: 30rpx;
+  height: 30rpx;
+  background: #1ab394;
+  border-radius: 50%;
+  -webkit-animation: fading_circle 1s ease-out infinite alternate;
+  animation: fading_circle 1s ease-out infinite alternate;
+}
+
+.hez{
+  width: 740rpx;
+  /* margin-top: 20rpx; */
+  margin-left: 4rpx;
+  display: flex;
+  flex-direction: row;
+}
+.he_left{
+  width: 100%;
+  background-color: #EDEDED;
+  /* border: 1rpx solid black;   */
+    display: flex;
+   flex-wrap: wrap;
+}
+.he_left_top{
+  height: 440rpx;
+  width: 50%; 
+   margin-top: 30rpx; 
+  background-color: #EDEDED;
+  box-shadow:3rpx 3rpx 3rpx 3rpx #EDEDED;
+  /* border-radius: 20rpx; */
+  /* border: 1rpx solid red  */
+}
+.he_tel{
+  width: 95%;
+   margin-left: 2.5%; 
+   margin-top: -10rpx;
+  height: 140rpx;
+  background-color: #fff;
+  border-bottom-left-radius:20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+.he_tlte{
+  width: 90%;
+  margin-left: 5%;
+  height: 80rpx;
+  font-size: 28rpx;
+  text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical;
+}
+.he_time{
+  width: 90%;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 26rpx;
+  color: #9E9E9E;
+  display: flex;
+  flex-direction: row;
+}
+.rt{
+  width: 30%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;color: #FF7B93;
+  background-color: #FBEFED;
+  margin-top: -20rpx;
+  margin-left: 50rpx;
+  border-radius: 20rpx;
+}

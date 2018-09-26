@@ -1,0 +1,19 @@
+<view class='bg'>
+  <image style='height:250rpx;width:740rpx;' src='../../image/jfbg.jpg'></image>
+  <view class='xs'>
+      <image style='height:100rpx;width:100rpx;margin-top:25rpx;margin-left:240rpx;' src='../../image/money@3x.png' mode="scaleToFill"></image>
+      <text class='money'>{{obj}}</text>
+  </view>
+</view>
+<view class='mx'>积分收支详细</view>
+<view class='list'>
+  <view class='kuang' wx:for='{{integralList}}'>
+    <view class='time'>{{item.createDate}}</view>
+    <view class='xq'>
+        <view class='wz'>{{item.describes}}</view>
+        <view class='number' wx:if='{{item.incurred>0}}' style='color:#3ED0FD'>+{{item.incurred}}</view>
+        <view class='number' wx:elif='{{item.incurred<0}}' style='color:#FE731E'>{{item.incurred}}</view>
+    </view>
+  </view>
+  
+</view>

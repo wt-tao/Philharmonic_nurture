@@ -1,0 +1,71 @@
+<!--pages/orderps/orderps.wxml-->
+<!-- <view class='wl'>
+  <!-- <view class='car'>
+    <image src='../../image/01.png' style='width:100%;height:100%'></image>
+  </view>
+  <view class='order'>您的订单待配货</view> 
+  <view class='jt'  >
+    <image style='width:100%;height:100%' src='../../image/right@3x.png/'></image>
+  </view>
+</view> -->
+<view class='sh'>
+    <view class='car' style='margin-top:50rpx'>
+        <image src='../../image/02.png' style='width:100%;height:100%'></image>
+    </view>
+    <view class='xx'>
+        <view class='xx_name'>
+            <text style='width:400rpx;'>收货人：{{address.name}}</text>
+            <text st>{{address.phone}}</text>
+        </view>
+        <view class='add'>收货地址：{{address.address}}</view>
+    </view>
+</view>
+
+<view class='com' wx:for='{{commodities}}'>
+  <view class='com_tp'>
+      <image  style='width:100%;height:100%' src='{{url}}/{{item.img}}'></image>
+  </view>
+  <view class='com_name'>
+      <view class='com_name_xq'>{{item.name}}</view>
+  </view>
+  <view class='com_pn'>
+      <view style='color:#FF6666;font-size:32rpx;margin-top:20rpx;width:100%; text-align:right'>￥{{item.price}}</view>
+      <view style='font-size:32rpx;margin-top:20rpx;width:100%; text-align:right'>x{{item.count}}</view>
+  </view>
+</view>
+
+<view class='price'>
+    <view class='colum'>
+        <view class='price_tel' style='width:50%;font-size:36rpx;'>商品总价:</view>
+        <view style='width:50%;text-align:right;font-size:34rpx;color:#888A8C'>￥{{total}}</view>
+    </view>
+    <view class='colum'>
+        <view class='price_tel' style='width:50%;font-size:36rpx;'>运费:</view>
+        <view style='width:50%;text-align:right;font-size:34rpx;color:#888A8C'>￥{{freight}}</view>
+    </view>
+     <view class='colum'>
+        <view class='price_tel' style='width:50%;font-size:32rpx;font-weight: bold'>实付款（含运费）:</view>
+        <view style='width:50%;text-align:right;font-size:36rpx;color:#FF6768'>￥{{settlement_total}}</view>
+    </view>
+</view>
+
+<view class='time'>
+    <view class='time_colum'>订单编号：{{id}}</view>
+    <view class='time_colum'>创建时间：{{createDate}}</view>
+    <view class='time_colum'>付款时间：{{payedTime}}</view>
+    <view class='time_colum'>发货时间：{{sendTime}}</view>
+    <view class='time_colum'>联系电话：{{contactPhone}} <text style='height:50rpx;width:150rpx;text-align: center;margin-left:30rpx;padding:10rpx 10rpx 10rpx 10rpx;border:1rpx solid #99999A' catchtap='tel' id='{{contactPhone}}'>点击联系</text></view>
+    <!-- <view class='time_colum'>联系电话：</view> -->
+</view>
+<!--0:代付款，前往支付的按钮和取消订单
+1：待收货，一个确认收货的按钮 如果express_code不为空，已发货，有物流的按钮
+2：已完成，物流信息按钮  -->
+<view class='botton'>
+    <!-- <view class='wlxx' wx:if='{{status==1}}' style='border:none'></view> -->
+  <view class='wlxx' wx:if="{{express_code!=null}}" bindtap='logistics' id='{{express_code}}'>物流信息</view>
+  <view class='wlxx' wx:elif="{{express_code==null}}" style='border:none'></view>
+    <!-- <view class='wlxx' style='color:#FF659D;border: 1rpx solid #FF659D;margin-left:5%'>确认收货</view> -->
+    <view class='wlxx' wx:if='{{status==0}}' style='color:#FF659D;border: 1rpx solid #FF659D;margin-left:5%' bindtap='pay' id='{{id}}' data-pay='{{total}}' >去支付</view>
+    <view class='wlxx' wx:elif='{{status==1}}' style='color:#FF659D;border: 1rpx solid #FF659D;margin-left:5%' bindtap='qqr' id='{{id}}'>确认收货</view>
+    <view class='wlxx' wx:elif='{{status==2}}' style='color:#FF659D;border: 1rpx solid #FF659D;margin-left:5%'>已完成</view>
+</view>

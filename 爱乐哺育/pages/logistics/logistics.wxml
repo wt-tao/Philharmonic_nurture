@@ -1,0 +1,49 @@
+<!-- pages/logistics/logistics.wxml
+<view class='kuang'>
+    <view class='tp'></view>
+    <view class='kd'>
+        <view class='cloum'>
+          <view class='zt'>运输中</view>
+        </view>
+         <view class='cloum'>
+          <view class='zt1'>百世快递</view>
+          <view class='zt1'>10034100157</view>
+        </view>
+         <view class='cloum'> 
+            <view class='zt1'>官方电话</view>
+            <view class='zt1' style='color:#FF8233'>95559</view>
+        </view>
+    </view>
+</view>
+<view class='hex'></view>
+<view class='kk'>
+  <view class='kdxx'>
+    <image class='dz' src='../../image/position@2x.png'></image>
+    <view class='sh'>收货地址：</view>
+    <view class='wz'>四川省成都市武侯祠大街155号 成都A区 2栋1208室</view>
+  </view>
+  <view class='kdxx' style='color: #89D7FF;'>
+    <view class='time'>
+        <view class='day' style='font-size:32rpx;line-height:100rpx;'>02-28</view>
+        <view class='day'style='font-size:26rpx;'>12:10</view>
+    </view>
+    <view class='sh1'>·</view>
+    <view class='wz1'>
+      <view class='shang'>运输中</view>
+      <view class='shang' style='font-size:30rpx;line-height: 40rpx;'>成都市武侯祠大街 揽收成功</view>
+    </view>
+  </view>
+   <view class='kdxx' >
+    <view class='time'>
+        <view class='day' style='font-size:32rpx;line-height:100rpx;'>02-27</view>
+        <view class='day'style='font-size:26rpx;'>12:10</view>
+    </view>
+    <view class='sh1'>·</view>
+    <view class='wz1'>
+    
+      <view class='shang'>已揽件</view>
+      <view class='shang' style='font-size:30rpx;line-height: 40rpx;'>成都市武侯祠大街 揽收成功</view>
+    </view>
+  </view>
+</view> -->
+<web-view src='https://m.kuaidi100.com/result.jsp?nu={{express_code}}'></web-view>

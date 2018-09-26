@@ -1,0 +1,148 @@
+.serach{
+width: 95%;
+display: flex;
+flex-direction: row;
+border-radius:20rpx;
+margin: 0 auto;
+background-color: #DAF0FB;
+margin-top: 15rpx;
+}
+.ss{
+  width: 100%;
+  height: 80rpx;
+  background-color: #B4E1F4;
+  position: absolute;
+  top:1rpx;
+}
+.serach_icon{
+width:30rpx;
+height: 29rpx;
+padding:5rpx 0 0 10rpx;
+}
+
+.serach_input{
+   font-size: 25rpx;
+   padding-left:15rpx;  
+}
+page {
+	background: #FFFFFF;
+
+}
+.panel{
+  width:100%;
+  height:1200rpx;
+  background-color:#FFF;
+  margin-top: 10rpx;
+  /* margin-top: 90rpx;    */
+}
+.swiper-tab{ 
+  width: 100%; 
+  border-bottom: 2rpx solid #FFF; 
+  text-align: center; 
+  line-height: 80rpx;
+  } 
+.swiper-tab-item{ 
+  font-size: 30rpx; 
+  display: inline-block; 
+  width: 50%; 
+   
+} 
+.list{
+  width: 740rpx;
+  margin-left: 4rpx;
+  height: 720rpx;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+.kuang{
+  width: 680rpx;
+  height: 140rpx;
+  border-bottom: 0.1rpx solid #B6B6B6;
+  margin-top: 10rpx;
+  margin-left: 25rpx;
+  display: flex;
+  flex-direction: column;
+}
+.name{
+  width: 650rpx;
+  height: 60rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  line-height: 70rpx;
+}
+.time{
+  width: 650rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  font-size: 26rpx;
+  color: #B6B6B6;
+}
+.on{ 
+  color:#43A7DD; 
+  border-bottom: 5rpx solid #43A7DD;
+  font-weight: bold;
+  } 
+ 
+.swiper-box{ 
+  height: 100%; 
+  width: 100%; 
+  background-color: #FFFFFF;
+  /* display: flex;
+  flex-wrap: wrap; */
+} 
+.bg{
+  width: 750rpx;
+  height: 1100rpx;
+  background-color: #ECECEC;
+  overflow: scroll;
+   /* display: inline-block;   */
+   display: flex; 
+  flex-wrap: wrap; 
+}
+.sp{
+  width: 330rpx;
+  height: 500rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  background-color: white;
+
+}
+.tp-1{
+  width: 330rpx;
+  height: 230rpx;
+}
+.mc{
+  width: 320rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  margin-left: 10rpx;
+    text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical;
+}
+.price{
+    width: 320rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+   display: flex;
+  flex-direction: row;
+}
+.sj{
+  width: 150rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  color: #FE751A;
+}
+.ys{
+  width: 160rpx;
+   height: 40rpx;
+  font-size: 24rpx;
+  color: #ADADAD;
+  text-align: right;
+}

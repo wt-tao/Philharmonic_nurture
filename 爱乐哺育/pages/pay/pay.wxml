@@ -1,0 +1,15 @@
+<!--pages/pay/pay.wxml-->
+<view class='money'>
+    <view class='xy'>需要支付：</view>
+    <view class='paymoney'>￥{{sjcprice}}</view>
+</view>
+<view class='wx'>
+    <image style='margin-left:20rpx; height:60rpx;width:60rpx;margin-top:20rpx;' src='../../image/wechat2@3x.png'></image>
+    <view class='wxpay'>微信支付</view>
+    <view class='quan'>
+          <icon type="circle" size="30"  color='green' wx:if='{{iconFlag1}}' bindtap='tongyi'/>
+          <icon type="success" size="30" wx:if='{{iconFlag2}}' bindtap='tongyi'/>
+    </view>
+</view>
+
+<view class='ljpay' bindtap='pay'>立即支付</view>

@@ -1,0 +1,10 @@
+<!--pages/leave/leave.wxml-->
+<textarea class='kuang1' placeholder='说说你的体会和建议吧' placeholder-style='font-size:26rpx;background-color: #D1D1D1; ' bindinput="bindTextAreaChange"  value="{{info}}" maxlength='{{noteMaxLen}}' ></textarea>
+
+
+<view class='sctp' >
+    <image class='zp' wx:if='{{show}}' src='{{tempFilePaths}}'></image>
+     <image class='zp' src='../../image/add@3x.png' bindtap='sc'></image>
+</view> 
+
+<view class='pj' bindtap='bindSubmit'>提交留言</view>

@@ -1,0 +1,100 @@
+@import "/wxParse/wxParse.wxss";
+
+ .video{
+  width: 95%;
+  /* height: 400rpx; */
+  margin-left: 2.5%
+} 
+
+.page{ 
+   text-indent: 20rpx;
+}
+.detail-top{
+  width: 100%;
+  background: #fff;
+  margin-top:-3%; 
+}
+.detail-midden{
+  margin-top:1.5%; 
+  margin-left: 2.5%;
+  width: 95%;
+  background: #fff;
+  white-space:pre-wrap;
+  /* text-indent: 20rpx; */
+}
+
+.detail-page{
+  margin-top:0.5%; 
+  width: 100%;
+  height: 280rpx;
+  background: #fff;
+}
+.title{
+ width: 740rpx;
+ text-align: center;
+ display: flex;
+ flex-wrap: wrap;
+ margin-top: 50rpx;
+}
+.detail-title{
+  width: 100%;
+  text-align: center;
+  font-size: 48rpx;
+  font-weight: bold;
+}
+.detail-other{
+  width: 740rpx;
+  text-align: center;
+  margin-top:28rpx; 
+	display: flex;
+}
+.date{
+   width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color:  gray;
+}
+
+
+.dibu{
+  width: 740rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.fx{
+  width: 50%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+.fxd{
+  width: 40%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+
+}
+.tb{
+  width: 30%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.xx{
+  width: 75%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+}
+.sc{
+  width: 25%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 34rpx;
+}

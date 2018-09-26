@@ -1,0 +1,38 @@
+<!--pages/list/list.wxml-->
+<!--搜索框  -->
+ <view class='ss'>
+     <view class='serach'>
+          
+          <input placeholder='请输入关键字搜索' class='serach_input' bindinput='inp' />
+          <image src='../../image/fdsss.png' mode='widthFix' class='serach_icon' bindtap='ins'></image>
+     </view>
+  <!-- </navigator> -->
+  </view>
+<!--轮播图  -->
+<block wx:if='{{show1}}'>
+<view class='head'>
+     <swiper indicator-dots="true" autoplay="true" interval="3000" indicator-color='white' indicator-active-color='#0099FF' duration="1000" class="swiper-item" circular="true">
+          <block wx:for="{{objList}}" wx:for-index="index">
+               <swiper-item>
+                    <image src="{{url}}/{{item.coverImg}}" class="slide-image" style='width:100%;height:100%' mode="aspectFill" id="{{item.id}}" bindtap='obj'/>
+               </swiper-item>
+          </block>
+     </swiper>
+</view>
+  
+    <view class='list' >
+      <view class='kuang' bindtap='particularst' wx:for="{{listArray}}" id='{{item.id}}'  data-img='{{item.coverImg}}'>
+          <view class='name'>{{item.title}}</view>
+          <view class='time'>更新时间：{{item.updateDate}}</view>
+      </view>
+    </view>
+  </block>
+
+    <block wx:if='{{show2}}'>
+    <view class='list' >
+      <view class='kuang' bindtap='particularst' wx:for="{{listArrays}}" id='{{item.id}}'  data-img='{{item.coverImg}}'>
+          <view class='name'>{{item.title}}</view>
+          <view class='time'>更新时间：{{item.updateDate}}</view>
+      </view>
+    </view>
+  </block>
